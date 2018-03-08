@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "todo-rn",
+    "description": "A very interesting project.",
+    "slug": "todo-rn",
+    "privacy": "public",
+    "sdkVersion": "25.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}
