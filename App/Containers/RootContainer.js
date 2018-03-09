@@ -4,14 +4,25 @@ import { Ionicons } from '@expo/vector-icons';
 import RootNavigation from '../Navigation/RootNavigation';
 
 
-export default class RootContainer extends Component {
+class RootContainer extends Component {
+
+  constructor(props){
+    super(props)
+    this.state = {
+      isAuthenticated: false
+    }
+  }
+
+  componentDidMount() {
+
+  }
 
   render() {
       return (
         <View style={styles.container}>
           {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
           {Platform.OS === 'android' && <View style={styles.statusBarUnderlay} />}
-          <RootNavigation />
+          <RootNavigation isAuthenticated={this.state.isAuthenticated}/>
         </View>
       );
   }
@@ -27,3 +38,5 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0.2)',
   },
 });
+
+export default RootContainer;

@@ -4,9 +4,9 @@ import {
   Text,
   TouchableOpacity,
   ActivityIndicator,
-  View,
-  
+  View,  
 } from 'react-native';
+import PropTypes from 'prop-types';
 
 import Colors from '../Utils/Colors';
 
@@ -38,5 +38,16 @@ const styles = StyleSheet.create({
   }
 });
 
+GoogleAuthButton.defaultProps = {
+    onPress: () => {},
+    showActivity: false
+}
+
+GoogleAuthButton.propTypes = {
+    onPress: PropTypes.func,
+    showActivity: PropTypes.bool
+}
+
 
 export default GoogleAuthButton;
+

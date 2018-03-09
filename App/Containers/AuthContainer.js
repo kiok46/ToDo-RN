@@ -19,8 +19,9 @@ class AuthContainer extends Component {
 
     constructor(props){
         super(props)
+
         this.state = {
-            isLoading: false
+            showActivity: false
         }
     }
 
@@ -28,24 +29,24 @@ class AuthContainer extends Component {
 
     }
 
-    handleCanceledAuth = () => {
-
+    handleAuthCanceled = () => {
+        this.setState({ showActivity: false })
     }
 
     handleAuthError = () => {
-
+        this.setState({ showActivity: false })
     }
 
     signInWithGoogleAsync = async () => {
         try {
-            this.setState({ isLoading: true })
+            this.setState({ showActivity: true })
             const result = await Expo.Google.logInAsync(GoogleAuthCredentials);
             
             if (result.type === 'success') {
                 this.props.navigation.navigate('Main')
                 this.storeAccessToken(result.accessToken)
             } else {
-                this.handleCanceledAuth()
+                this.handleAuthCanceled()
             }
         } catch(e) {
             this.handleAuthError()
@@ -55,7 +56,10 @@ class AuthContainer extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <GoogleAuthButton onPress={this.signInWithGoogleAsync} showActivity={this.state.isLoading}/>
+        <GoogleAuthButton
+            onPress={this.signInWithGoogleAsync}
+            showActivity={this.state.showActivity}
+        />
       </View>
     );
   }
