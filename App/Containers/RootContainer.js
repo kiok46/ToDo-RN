@@ -3,6 +3,8 @@ import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import RootNavigation from '../Navigation/RootNavigation';
 
+import { setLocalNotification, clearLocalNotification } from "../Utils/Notification";
+
 
 class RootContainer extends Component {
 
@@ -14,7 +16,11 @@ class RootContainer extends Component {
   }
 
   componentDidMount() {
+    setLocalNotification();
+  }
 
+  componentWillUnmount() {
+    clearLocalNotification();
   }
 
   render() {

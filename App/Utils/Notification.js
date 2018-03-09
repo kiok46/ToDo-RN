@@ -1,37 +1,60 @@
-import { Constants, Permissions, Notifications } from 'expo';
+import { AsyncStorage } from 'react-native';
+import { Notifications, Permissions } from 'expo'
 
-// Example server, implemented in Rails: https://git.io/vKHKv
-const PUSH_ENDPOINT = 'https://expo-push-server.herokuapp.com/tokens';
 
-export default (async function registerForPushNotificationsAsync() {
-  // Remote notifications do not work in simulators, only on device
-  if (!Constants.isDevice) {
-    return;
-  }
+const NOTIFICATION_KEY = 'TODO:notifications'
 
-  // Android remote notification permissions are granted during the app
-  // install, so this will only ask on iOS
-  let { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
+createNotification = () => {
+    return {
+        title: 'Complete a Task',
+        body: "👋  You should probably complete your tasks",
+        ios: {
+            sound: true,
+        },
+        android: {
+            sound: true,
+            priority: 'high',
+            sticky: false,
+            vibrate: true,
+        }
+    }
+}
 
-  // Stop here if the user did not grant permissions
-  if (status !== 'granted') {
-    return;
-  }
+setLocalNotification = () => {
+  AsyncStorage.clear()
+  AsyncStorage.getItem(NOTIFICATION_KEY)
+      .then(JSON.parse)
+      .then((data) => {
+          if (data === null) {
+              Permissions.askAsync(Permissions.NOTIFICATIONS)
+                  .then(({ status }) => {
+                      if (status === 'granted') {
+                          Notifications.cancelAllScheduledNotificationsAsync()
+                          let t = new Date();
+                          t.setSeconds(t.getSeconds() + 10);
 
-  // Get the token that uniquely identifies this device
-  let token = await Notifications.getExpoPushTokenAsync();
+                          const schedulingOptions = {
+                            time: t,
+                            repeat: 'minute'
+                          };
+                          Notifications.scheduleLocalNotificationAsync(
+                              createNotification(),
+                              schedulingOptions
+                          )
+                          AsyncStorage.setItem(NOTIFICATION_KEY, JSON.stringify(true))
+                      }
+                  })
+          }
+      })
+}
 
-  // POST the token to our backend so we can use it to send pushes from there
-  return fetch(PUSH_ENDPOINT, {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      token: {
-        value: token,
-      },
-    }),
-  });
-});
+clearLocalNotification = () => {
+  return AsyncStorage.removeItem(NOTIFICATION_KEY)
+      .then(Notifications.cancelAllScheduledNotificationsAsync)
+}
+
+export {
+  createNotification,
+  setLocalNotification,
+  clearLocalNotification,
+}

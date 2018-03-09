@@ -12,6 +12,7 @@ import {
 import GoogleAuthButton from '../Components/GoogleAuthButton';
 import GoogleAuthCredentials from '../Config/googleAuth';
 
+
 class AuthContainer extends Component {
     static navigationOptions = {
         header: null,
@@ -19,14 +20,13 @@ class AuthContainer extends Component {
 
     constructor(props){
         super(props)
-
         this.state = {
             showActivity: false
         }
     }
 
-    storeAccessToken = (accessToken) => {
-
+    handleAuthSuccess = (accessToken) => {
+        this.props.navigation.navigate('Main')
     }
 
     handleAuthCanceled = () => {
@@ -43,8 +43,7 @@ class AuthContainer extends Component {
             const result = await Expo.Google.logInAsync(GoogleAuthCredentials);
             
             if (result.type === 'success') {
-                this.props.navigation.navigate('Main')
-                this.storeAccessToken(result.accessToken)
+                this.handleAuthSuccess(result.accessToken)
             } else {
                 this.handleAuthCanceled()
             }

@@ -1,12 +1,11 @@
-import { Notifications } from 'expo';
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { StackNavigator } from 'react-navigation';
+import PropTypes from 'prop-types';
 
 import MainTabNavigator from './MainTabNavigator';
 import AuthContainer from '../Containers/AuthContainer';
 import RootContainer from '../Containers/RootContainer';
-import registerForPushNotificationsAsync from '../Utils/Notification';
+
 
 const RootStackNavigator = (isAuthenticated) => {
   return StackNavigator(
@@ -26,31 +25,21 @@ const RootStackNavigator = (isAuthenticated) => {
 }
 
 
-export default class RootNavigator extends React.Component {
-  componentDidMount() {
-    this._notificationSubscription = this._registerForPushNotifications();
-  }
-
-  componentWillUnmount() {
-    this._notificationSubscription && this._notificationSubscription.remove();
-  }
+class RootNavigator extends Component {
 
   render() {
     const Root = RootStackNavigator(this.props.isAuthenticated)
-    return <Root />;
+    return (
+      <Root />
+    )
   }
 
-  _registerForPushNotifications() {
-    registerForPushNotificationsAsync();
-    this._notificationSubscription = Notifications.addListener(this._handleNotification);
-  }
-
-  _handleNotification = ({ origin, data }) => {
-    console.log(`Push notification ${origin} with data: ${JSON.stringify(data)}`);
-  };
 }
 
 
 RootNavigator.propTypes = {
   isAuthenticated: PropTypes.bool.isRequired
 }
+
+
+export default RootNavigator;
