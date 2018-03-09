@@ -21,7 +21,6 @@ createNotification = () => {
 }
 
 setLocalNotification = () => {
-  AsyncStorage.clear()
   AsyncStorage.getItem(NOTIFICATION_KEY)
       .then(JSON.parse)
       .then((data) => {

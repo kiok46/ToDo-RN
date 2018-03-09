@@ -8,9 +8,10 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { connect } from 'react-redux';
+import { googleLogin } from '../Actions';
 
 import GoogleAuthButton from '../Components/GoogleAuthButton';
-import GoogleAuthCredentials from '../Config/googleAuth';
 
 
 class AuthContainer extends Component {
@@ -33,31 +34,20 @@ class AuthContainer extends Component {
         this.setState({ showActivity: false })
     }
 
-    handleAuthError = () => {
+    handleAuthFailed = () => {
         this.setState({ showActivity: false })
     }
 
-    signInWithGoogleAsync = async () => {
-        try {
-            this.setState({ showActivity: true })
-            const result = await Expo.Google.logInAsync(GoogleAuthCredentials);
-            
-            if (result.type === 'success') {
-                this.handleAuthSuccess(result.accessToken)
-            } else {
-                this.handleAuthCanceled()
-            }
-        } catch(e) {
-            this.handleAuthError()
-        }
+    googleLogin = () => {
+        this.props.googleLogin()
     }
 
   render() {
     return (
       <View style={styles.container}>
         <GoogleAuthButton
-            onPress={this.signInWithGoogleAsync}
-            showActivity={this.state.showActivity}
+            onPress={this.googleLogin}
+            showActivity={this.props.failed}
         />
       </View>
     );
@@ -73,5 +63,12 @@ const styles = StyleSheet.create({
   },
 });
 
+const mapStateToProps = (state) => {
+    return {
+        failed: state.GoogleAuth.failed,
+        cancelled: state.GoogleAuth.cancelled
+    }
+}
 
-export default AuthContainer;
+
+export default connect(mapStateToProps, {googleLogin})(AuthContainer);

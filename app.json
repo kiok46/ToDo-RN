@@ -9,7 +9,11 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "host.exp.exponent"
+    },
+    "android": {
+      "package": "host.exp.exponente"
     }
   }
 }

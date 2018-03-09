@@ -3,16 +3,18 @@ import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import RootNavigation from '../Navigation/RootNavigation';
 
+import { connect } from 'react-redux';
+import { isLoggedIn } from '../Actions';
+
+
 import { setLocalNotification, clearLocalNotification } from "../Utils/Notification";
 
 
 class RootContainer extends Component {
 
-  constructor(props){
-    super(props)
-    this.state = {
-      isAuthenticated: false
-    }
+  componentWillMount() {
+    this.props.isLoggedIn()
+    console.log(this.props.accessToken)
   }
 
   componentDidMount() {
@@ -28,7 +30,7 @@ class RootContainer extends Component {
         <View style={styles.container}>
           {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
           {Platform.OS === 'android' && <View style={styles.statusBarUnderlay} />}
-          <RootNavigation isAuthenticated={this.state.isAuthenticated}/>
+          <RootNavigation isAuthenticated={this.props.accessToken ? true : false}/>
         </View>
       );
   }
@@ -45,4 +47,11 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RootContainer;
+const mapStatetoProps = (state) => {
+  return {
+    accessToken: state.GoogleAuth.accessToken
+  } 
+}
+
+
+export default connect(mapStatetoProps, {isLoggedIn})(RootContainer);
