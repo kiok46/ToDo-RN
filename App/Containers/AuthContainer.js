@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 import GoogleAuthButton from '../Components/GoogleAuthButton';
-
+import GoogleAuthCredentials from '../Config/googleAuth';
 
 class AuthContainer extends Component {
     static navigationOptions = {
@@ -24,8 +24,32 @@ class AuthContainer extends Component {
         }
     }
 
-    signInWithGoogleAsync = async () => {
+    storeAccessToken = (accessToken) => {
 
+    }
+
+    handleCanceledAuth = () => {
+
+    }
+
+    handleAuthError = () => {
+
+    }
+
+    signInWithGoogleAsync = async () => {
+        try {
+            this.setState({ isLoading: true })
+            const result = await Expo.Google.logInAsync(GoogleAuthCredentials);
+            
+            if (result.type === 'success') {
+                this.props.navigation.navigate('Main')
+                this.storeAccessToken(result.accessToken)
+            } else {
+                this.handleCanceledAuth()
+            }
+        } catch(e) {
+            this.handleAuthError()
+        }
     }
 
   render() {
