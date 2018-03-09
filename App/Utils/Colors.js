@@ -1,6 +1,8 @@
 const tintColor = '#2f95dc';
 
 export default {
+  googleAuthColor: "rgba(221, 75, 57, 1)",
+  white: "rgba(255, 255, 255, 1)",
   tintColor,
   tabIconDefault: '#ccc',
   tabIconSelected: tintColor,

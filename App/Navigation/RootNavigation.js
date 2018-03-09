@@ -3,12 +3,16 @@ import React from 'react';
 import { StackNavigator } from 'react-navigation';
 
 import MainTabNavigator from './MainTabNavigator';
+import AuthContainer from '../Containers/AuthContainer';
 import registerForPushNotificationsAsync from '../Utils/Notification';
 
 const RootStackNavigator = StackNavigator(
   {
+    Auth: {
+      screen: AuthContainer
+    },
     Main: {
-      screen: MainTabNavigator,
+      screen: MainTabNavigator
     },
   },
   {
