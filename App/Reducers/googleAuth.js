@@ -8,7 +8,7 @@ import {
 
 export const INITIAL_STATE = {
     accessToken: null,
-    loggedIn: false
+    loggedIn: null,
 }
 
 

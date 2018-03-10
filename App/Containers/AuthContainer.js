@@ -26,19 +26,12 @@ class AuthContainer extends Component {
         }
     }
 
-    handleAuthSuccess = (accessToken) => {
-        this.props.navigation.navigate('Main')
-    }
-
-    handleAuthCanceled = () => {
-        this.setState({ showActivity: false })
-    }
-
-    handleAuthFailed = () => {
-        this.setState({ showActivity: false })
-    }
-
     googleLogin = () => {
+        if (this.props.loggedIn) {
+            this.setState({showActivity: false})
+        } else {
+            this.setState({showActivity: true})
+        }
         this.props.googleLogin()
     }
 
@@ -47,7 +40,7 @@ class AuthContainer extends Component {
       <View style={styles.container}>
         <GoogleAuthButton
             onPress={this.googleLogin}
-            showActivity={this.props.failed}
+            showActivity={this.state.showActivity}
         />
       </View>
     );
@@ -65,10 +58,10 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = (state) => {
     return {
-        failed: state.GoogleAuth.failed,
-        cancelled: state.GoogleAuth.cancelled
+        loggedIn: state.GoogleAuth.loggedIn,
+        accessToken: state.GoogleAuth.accessToken
     }
 }
 
 
-export default connect(mapStateToProps, {googleLogin})(AuthContainer);
+export default connect(mapStateToProps, { googleLogin })(AuthContainer);

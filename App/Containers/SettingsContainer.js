@@ -16,7 +16,6 @@ class SettingsContainer extends Component {
 
   constructor(props){
     super(props)
-    console.log(this.props, "propspp")
 
   }
 

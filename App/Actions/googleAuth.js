@@ -44,14 +44,14 @@ export const isLoggedIn = () => async dispatch => {
 export const googleLogin = () => async dispatch => {
     try {
         const result = await Expo.Google.logInAsync(GoogleAuthCredentials);
-        
+        console.log(result, "resultresultresult")
         if (result.type === 'success') {
             handleAuthSuccess(dispatch, result.accessToken)
         } else {
-            handleAuthCanceled()
+            dispatch(handleAuthCanceled())
         }
     } catch(e) {
-        handleAuthFailed()
+        dispatch(handleAuthFailed())
     }
 }
 
