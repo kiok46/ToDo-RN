@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
 import {
-    Text,
+    TextInput,
     View,
+    Text,
     StyleSheet,
-    TouchableOpacity
+    TouchableOpacity,
+    TouchableWithoutFeedback
 } from 'react-native';
 import PropTypes from 'prop-types';
 import { Entypo } from '@expo/vector-icons';
+import Colors from '../Utils/Colors';
+
 
 class FloatingButton extends Component {
-	constructor(props) {
-		super(props);
-	}
+
 	render (){
 		return (
-         <TouchableOpacity onPress={this.props.onPress}>
-            <View style={styles.floatingStyle}>
-                <Entypo name="plus" size={32} color="white" />
+            <View style={[styles.floatingStyle]}>
+                <Entypo name="plus" size={32} color={Colors.white} onPress={this.props.onPress}/>
             </View>
-         </TouchableOpacity>
 		);
 	}
 };
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         right: 30,
         height: 60,
         width: 60,
-        backgroundColor: 'tomato',
+        backgroundColor: Colors.tintColor,
         borderRadius: 30,
         justifyContent: 'center',
         alignItems: 'center'

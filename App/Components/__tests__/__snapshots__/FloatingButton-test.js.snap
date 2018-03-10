@@ -17,46 +17,17 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "activeOpacity": 0.2,
-      "children": <View
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "tomato",
-            "borderRadius": 30,
-            "bottom": 30,
-            "height": 60,
-            "justifyContent": "center",
-            "position": "absolute",
-            "right": 30,
-            "width": 60,
-          }
-        }
-      >
-        <Icon
-          allowFontScaling={false}
-          color="white"
-          name="plus"
-          size={32}
-        />
-      </View>,
-      "onPress": undefined,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <Icon
-          allowFontScaling={false}
-          color="white"
-          name="plus"
-          size={32}
-        />,
-        "style": Object {
+      "children": <Icon
+        allowFontScaling={false}
+        color="white"
+        name="plus"
+        onPress={undefined}
+        size={32}
+      />,
+      "style": Array [
+        Object {
           "alignItems": "center",
-          "backgroundColor": "tomato",
+          "backgroundColor": "brown",
           "borderRadius": 30,
           "bottom": 30,
           "height": 60,
@@ -65,22 +36,22 @@ ShallowWrapper {
           "right": 30,
           "width": 60,
         },
+      ],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "allowFontScaling": false,
+        "color": "white",
+        "name": "plus",
+        "onPress": undefined,
+        "size": 32,
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "allowFontScaling": false,
-          "color": "white",
-          "name": "plus",
-          "size": 32,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
+      "rendered": null,
       "type": [Function],
     },
     "type": [Function],
@@ -91,46 +62,17 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "activeOpacity": 0.2,
-        "children": <View
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "tomato",
-              "borderRadius": 30,
-              "bottom": 30,
-              "height": 60,
-              "justifyContent": "center",
-              "position": "absolute",
-              "right": 30,
-              "width": 60,
-            }
-          }
-        >
-          <Icon
-            allowFontScaling={false}
-            color="white"
-            name="plus"
-            size={32}
-          />
-        </View>,
-        "onPress": undefined,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": <Icon
-            allowFontScaling={false}
-            color="white"
-            name="plus"
-            size={32}
-          />,
-          "style": Object {
+        "children": <Icon
+          allowFontScaling={false}
+          color="white"
+          name="plus"
+          onPress={undefined}
+          size={32}
+        />,
+        "style": Array [
+          Object {
             "alignItems": "center",
-            "backgroundColor": "tomato",
+            "backgroundColor": "brown",
             "borderRadius": 30,
             "bottom": 30,
             "height": 60,
@@ -139,22 +81,22 @@ ShallowWrapper {
             "right": 30,
             "width": 60,
           },
+        ],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "allowFontScaling": false,
+          "color": "white",
+          "name": "plus",
+          "onPress": undefined,
+          "size": 32,
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "allowFontScaling": false,
-            "color": "white",
-            "name": "plus",
-            "size": 32,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+        "rendered": null,
         "type": [Function],
       },
       "type": [Function],

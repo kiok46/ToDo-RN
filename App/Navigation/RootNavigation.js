@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import MainTabNavigator from './MainTabNavigator';
 import AuthContainer from '../Containers/AuthContainer';
 import RootContainer from '../Containers/RootContainer';
+import NewToDoContainer from '../Containers/NewToDoContainer';
 
 
 const RootStackNavigator = (isAuthenticated) => {
@@ -16,6 +17,9 @@ const RootStackNavigator = (isAuthenticated) => {
         Main: {
           screen: MainTabNavigator
         },
+        New: {
+          screen: NewToDoContainer
+        }
       },
       {
         initialRouteName: isAuthenticated ? "Main" : "Auth"

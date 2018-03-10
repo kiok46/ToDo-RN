@@ -49,7 +49,7 @@ class HomeContainer extends Component {
           />
         </ScrollView>
 
-        <FloatingButton />
+        <FloatingButton onPress={() => {this.props.navigation.navigate('New')}}/>
 
       </KeyboardAvoidingView>
     );
