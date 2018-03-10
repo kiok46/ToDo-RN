@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 
 import ToDoListItem from '../Components/ToDoListItem';
+import FloatingButton from '../Components/FloatingButton';
 
 
 class HomeContainer extends Component {
@@ -27,6 +28,8 @@ class HomeContainer extends Component {
           <ToDoListItem/>
           <ToDoListItem/>
         </ScrollView>
+
+        <FloatingButton />
 
       </View>
     );
