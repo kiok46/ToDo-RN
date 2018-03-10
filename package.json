@@ -5,7 +5,10 @@
     "test": "node ./node_modules/jest/bin/jest.js --watchAll"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "setupFiles": [
+      "./App/setupTests.js"
+    ]
   },
   "dependencies": {
     "expo": "^25.0.0",
@@ -18,7 +21,13 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
+    "jest-expo": "^25.0.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.2.0",
     "redux-logger": "^3.0.6",
-    "jest-expo": "^25.0.0"
+    "redux-mock-store": "^1.5.1"
   }
 }

@@ -14,7 +14,6 @@ class RootContainer extends Component {
 
   componentWillMount() {
     this.props.isLoggedIn()
-    console.log(this.props.accessToken)
   }
 
   componentDidMount() {

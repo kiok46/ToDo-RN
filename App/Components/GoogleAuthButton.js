@@ -32,7 +32,6 @@ class GoogleAuthButton extends Component {
 
 const styles = StyleSheet.create({
   authButtonStyle: {
-      backgroundColor: 'tomato',
       borderRadius: 5,
       padding: 10
   }

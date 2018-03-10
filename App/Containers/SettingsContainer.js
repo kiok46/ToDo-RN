@@ -6,7 +6,8 @@ import {
 } from 'react-native';
 
 import { connect } from 'react-redux'
-import { googleLogout } from '../Actions/googleAuth'
+import { isLoggedIn, googleLogout } from '../Actions/googleAuth'
+
 
 class SettingsContainer extends Component {
   static navigationOptions = {
@@ -15,6 +16,8 @@ class SettingsContainer extends Component {
 
   constructor(props){
     super(props)
+    console.log(this.props, "propspp")
+
   }
 
   logout = () => {
@@ -38,9 +41,10 @@ class SettingsContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state)
   return {
     loggedIn: state.GoogleAuth.loggedIn
   }
 }
 
-export default connect(mapStateToProps, {googleLogout})(SettingsContainer);
+export default connect(mapStateToProps, { isLoggedIn, googleLogout })(SettingsContainer);
