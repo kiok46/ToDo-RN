@@ -20,6 +20,11 @@ class HomeContainer extends Component {
   };
 
   saveEditedToDo = () => {
+
+  }
+
+  onAttachMedia = () => {
+    Expo.DocumentPicker.getDocumentAsync({type: "*/*"})
   }
 
   onToDoTaskComplete = () => {
@@ -33,11 +38,13 @@ class HomeContainer extends Component {
           <ToDoListItem
             contentText={"Need to buy biscuits."}
             onEditDone={this.saveEditedToDo}
+            onAttachMedia={this.onAttachMedia}
             onComplete={this.onToDoTaskComplete}
           />
           <ToDoListItem
             contentText={"Need to buy Tomato"}
             onEditDone={this.saveEditedToDo}
+            onAttachMedia={this.onAttachMedia}
             onComplete={this.onToDoTaskComplete}
           />
         </ScrollView>

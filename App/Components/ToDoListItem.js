@@ -59,7 +59,7 @@ class ToDoListItem extends Component {
     }
 
 	render (){
-		return (
+        return (
           <Card>
             <View style={[styles.cardContainerStyle, {backgroundColor: Colors.getRandomColor()}]}>
               <View style={styles.contentContainerStyle}>
@@ -67,7 +67,7 @@ class ToDoListItem extends Component {
               </View>
               <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>
                 <Entypo name="edit" size={32} color={Colors.white} onPress={this.onPressEdit}/>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={this.props.onAttachMedia}>
                     <View style={styles.attachMediaStyle}>
                     <Text style={styles.mediaTextStyle}>Attach media</Text>
                     </View>
@@ -127,13 +127,15 @@ const styles = StyleSheet.create({
 ToDoListItem.defaultProps = {
     contentText: "",
     onEditDone: () => {},
-    onComplete: () => {}
+    onComplete: () => {},
+    onAttachMedia: () => {}
 }
 
 ToDoListItem.propTypes = {
     contentText: PropTypes.string,
     onEditDone: PropTypes.func,
-    onComplete: PropTypes.func
+    onComplete: PropTypes.func,
+    onAttachMedia: PropTypes.func
 }
 
 export default ToDoListItem;

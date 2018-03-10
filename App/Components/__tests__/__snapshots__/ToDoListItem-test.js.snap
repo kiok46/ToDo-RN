@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ToDoListItem
     contentText=""
+    onAttachMedia={[Function]}
     onComplete={[Function]}
     onEditDone={[Function]}
   />,
@@ -32,7 +33,7 @@ ShallowWrapper {
               "width": "100%",
             },
             Object {
-              "backgroundColor": "#353627",
+              "backgroundColor": "#160367",
             },
           ]
         }
@@ -79,6 +80,7 @@ ShallowWrapper {
           />
           <TouchableOpacity
             activeOpacity={0.2}
+            onPress={[Function]}
           >
             <View
               style={
@@ -168,6 +170,7 @@ ShallowWrapper {
             />
             <TouchableOpacity
               activeOpacity={0.2}
+              onPress={[Function]}
             >
               <View
                 style={
@@ -216,7 +219,7 @@ ShallowWrapper {
             "width": "100%",
           },
           Object {
-            "backgroundColor": "#353627",
+            "backgroundColor": "#160367",
           },
         ],
       },
@@ -285,6 +288,7 @@ ShallowWrapper {
               />,
               <TouchableOpacity
                 activeOpacity={0.2}
+                onPress={[Function]}
               >
                 <View
                   style={
@@ -379,6 +383,7 @@ ShallowWrapper {
                     Attach media
                   </Text>
                 </View>,
+                "onPress": [Function],
               },
               "ref": null,
               "rendered": Object {
@@ -474,7 +479,7 @@ ShallowWrapper {
                 "width": "100%",
               },
               Object {
-                "backgroundColor": "#353627",
+                "backgroundColor": "#160367",
               },
             ]
           }
@@ -521,6 +526,7 @@ ShallowWrapper {
             />
             <TouchableOpacity
               activeOpacity={0.2}
+              onPress={[Function]}
             >
               <View
                 style={
@@ -610,6 +616,7 @@ ShallowWrapper {
               />
               <TouchableOpacity
                 activeOpacity={0.2}
+                onPress={[Function]}
               >
                 <View
                   style={
@@ -658,7 +665,7 @@ ShallowWrapper {
               "width": "100%",
             },
             Object {
-              "backgroundColor": "#353627",
+              "backgroundColor": "#160367",
             },
           ],
         },
@@ -727,6 +734,7 @@ ShallowWrapper {
                 />,
                 <TouchableOpacity
                   activeOpacity={0.2}
+                  onPress={[Function]}
                 >
                   <View
                     style={
@@ -821,6 +829,7 @@ ShallowWrapper {
                       Attach media
                     </Text>
                   </View>,
+                  "onPress": [Function],
                 },
                 "ref": null,
                 "rendered": Object {
@@ -916,6 +925,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ToDoListItem
     contentText="Need to buy biscuits"
+    onAttachMedia={[Function]}
     onComplete={[Function]}
     onEditDone={[Function]}
   />,
@@ -942,7 +952,7 @@ ShallowWrapper {
               "width": "100%",
             },
             Object {
-              "backgroundColor": "#844509",
+              "backgroundColor": "#491464",
             },
           ]
         }
@@ -989,6 +999,7 @@ ShallowWrapper {
           />
           <TouchableOpacity
             activeOpacity={0.2}
+            onPress={[Function]}
           >
             <View
               style={
@@ -1078,6 +1089,7 @@ ShallowWrapper {
             />
             <TouchableOpacity
               activeOpacity={0.2}
+              onPress={[Function]}
             >
               <View
                 style={
@@ -1126,7 +1138,7 @@ ShallowWrapper {
             "width": "100%",
           },
           Object {
-            "backgroundColor": "#844509",
+            "backgroundColor": "#491464",
           },
         ],
       },
@@ -1195,6 +1207,7 @@ ShallowWrapper {
               />,
               <TouchableOpacity
                 activeOpacity={0.2}
+                onPress={[Function]}
               >
                 <View
                   style={
@@ -1289,6 +1302,7 @@ ShallowWrapper {
                     Attach media
                   </Text>
                 </View>,
+                "onPress": [Function],
               },
               "ref": null,
               "rendered": Object {
@@ -1384,7 +1398,7 @@ ShallowWrapper {
                 "width": "100%",
               },
               Object {
-                "backgroundColor": "#844509",
+                "backgroundColor": "#491464",
               },
             ]
           }
@@ -1431,6 +1445,7 @@ ShallowWrapper {
             />
             <TouchableOpacity
               activeOpacity={0.2}
+              onPress={[Function]}
             >
               <View
                 style={
@@ -1520,6 +1535,7 @@ ShallowWrapper {
               />
               <TouchableOpacity
                 activeOpacity={0.2}
+                onPress={[Function]}
               >
                 <View
                   style={
@@ -1568,7 +1584,7 @@ ShallowWrapper {
               "width": "100%",
             },
             Object {
-              "backgroundColor": "#844509",
+              "backgroundColor": "#491464",
             },
           ],
         },
@@ -1637,6 +1653,7 @@ ShallowWrapper {
                 />,
                 <TouchableOpacity
                   activeOpacity={0.2}
+                  onPress={[Function]}
                 >
                   <View
                     style={
@@ -1731,6 +1748,7 @@ ShallowWrapper {
                       Attach media
                     </Text>
                   </View>,
+                  "onPress": [Function],
                 },
                 "ref": null,
                 "rendered": Object {
