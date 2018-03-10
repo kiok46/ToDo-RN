@@ -27,11 +27,7 @@ class AuthContainer extends Component {
     }
 
     googleLogin = () => {
-        if (this.props.loggedIn) {
-            this.setState({showActivity: false})
-        } else {
-            this.setState({showActivity: true})
-        }
+        this.setState({showActivity: true})
         this.props.googleLogin()
     }
 
@@ -40,7 +36,7 @@ class AuthContainer extends Component {
       <View style={styles.container}>
         <GoogleAuthButton
             onPress={this.googleLogin}
-            showActivity={this.state.showActivity}
+            showActivity={false}
         />
       </View>
     );
@@ -59,7 +55,7 @@ const styles = StyleSheet.create({
 const mapStateToProps = (state) => {
     return {
         loggedIn: state.GoogleAuth.loggedIn,
-        accessToken: state.GoogleAuth.accessToken
+        accessToken: state.GoogleAuth.accessToken,
     }
 }
 

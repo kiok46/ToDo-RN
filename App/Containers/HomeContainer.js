@@ -9,8 +9,10 @@ import {
   View,
 } from 'react-native';
 
+import ToDoListItem from '../Components/ToDoListItem';
 
-export default class HomeScreen extends Component {
+
+class HomeContainer extends Component {
   static navigationOptions = {
     header: null,
   };
@@ -19,7 +21,13 @@ export default class HomeScreen extends Component {
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} >
+          <ToDoListItem
+            contentText={"Need to buy biscuits"}
+          />
+          <ToDoListItem/>
+          <ToDoListItem/>
         </ScrollView>
+
       </View>
     );
   }
@@ -29,5 +37,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-  }
+  },
+
 });
+
+
+export default HomeContainer;
