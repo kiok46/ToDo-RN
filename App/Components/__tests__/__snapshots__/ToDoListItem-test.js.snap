@@ -6,6 +6,8 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ToDoListItem
     contentText=""
+    onComplete={[Function]}
+    onEditDone={[Function]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -21,20 +23,27 @@ ShallowWrapper {
     "props": Object {
       "children": <View
         style={
-          Object {
-            "backgroundColor": "rgba(230, 230, 230, 1)",
-            "flex": 1,
-            "height": 250,
-            "justifyContent": "space-around",
-            "width": "100%",
-          }
+          Array [
+            Object {
+              "backgroundColor": "rgba(230, 230, 230, 1)",
+              "flex": 1,
+              "height": 250,
+              "justifyContent": "space-around",
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#353627",
+            },
+          ]
         }
       >
         <View
           style={
             Object {
               "alignItems": "center",
+              "height": 150,
               "justifyContent": "center",
+              "width": "100%",
             }
           }
         >
@@ -44,6 +53,7 @@ ShallowWrapper {
             ellipsizeMode="tail"
             style={
               Object {
+                "color": "rgba(255, 255, 255, 1)",
                 "fontSize": 24,
                 "fontWeight": "500",
               }
@@ -52,19 +62,61 @@ ShallowWrapper {
             
           </Text>
         </View>
-        <TouchableOpacity
-          activeOpacity={0.2}
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+            }
+          }
         >
-          <View>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+          <Icon
+            allowFontScaling={false}
+            color="rgba(255, 255, 255, 1)"
+            name="edit"
+            onPress={[Function]}
+            size={32}
+          />
+          <TouchableOpacity
+            activeOpacity={0.2}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(255, 255, 255, 1)",
+                  "borderRadius": 5,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "paddingHorizontal": 10,
+                  "paddingVertical": 10,
+                }
+              }
             >
-              Attach media
-            </Text>
-          </View>
-        </TouchableOpacity>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(255, 255, 255, 1)",
+                    "fontSize": 18,
+                    "fontWeight": "500",
+                  }
+                }
+              >
+                Attach media
+              </Text>
+            </View>
+          </TouchableOpacity>
+          <Icon
+            allowFontScaling={false}
+            color="rgba(255, 255, 255, 1)"
+            name="check"
+            onPress={[Function]}
+            size={32}
+          />
+        </View>
       </View>,
     },
     "ref": null,
@@ -78,7 +130,9 @@ ShallowWrapper {
             style={
               Object {
                 "alignItems": "center",
+                "height": 150,
                 "justifyContent": "center",
+                "width": "100%",
               }
             }
           >
@@ -88,6 +142,7 @@ ShallowWrapper {
               ellipsizeMode="tail"
               style={
                 Object {
+                  "color": "rgba(255, 255, 255, 1)",
                   "fontSize": 24,
                   "fontWeight": "500",
                 }
@@ -96,27 +151,74 @@ ShallowWrapper {
               
             </Text>
           </View>,
-          <TouchableOpacity
-            activeOpacity={0.2}
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+              }
+            }
           >
-            <View>
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
+            <Icon
+              allowFontScaling={false}
+              color="rgba(255, 255, 255, 1)"
+              name="edit"
+              onPress={[Function]}
+              size={32}
+            />
+            <TouchableOpacity
+              activeOpacity={0.2}
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "borderColor": "rgba(255, 255, 255, 1)",
+                    "borderRadius": 5,
+                    "borderWidth": 2,
+                    "justifyContent": "center",
+                    "paddingHorizontal": 10,
+                    "paddingVertical": 10,
+                  }
+                }
               >
-                Attach media
-              </Text>
-            </View>
-          </TouchableOpacity>,
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "rgba(255, 255, 255, 1)",
+                      "fontSize": 18,
+                      "fontWeight": "500",
+                    }
+                  }
+                >
+                  Attach media
+                </Text>
+              </View>
+            </TouchableOpacity>
+            <Icon
+              allowFontScaling={false}
+              color="rgba(255, 255, 255, 1)"
+              name="check"
+              onPress={[Function]}
+              size={32}
+            />
+          </View>,
         ],
-        "style": Object {
-          "backgroundColor": "rgba(230, 230, 230, 1)",
-          "flex": 1,
-          "height": 250,
-          "justifyContent": "space-around",
-          "width": "100%",
-        },
+        "style": Array [
+          Object {
+            "backgroundColor": "rgba(230, 230, 230, 1)",
+            "flex": 1,
+            "height": 250,
+            "justifyContent": "space-around",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "#353627",
+          },
+        ],
       },
       "ref": null,
       "rendered": Array [
@@ -131,6 +233,7 @@ ShallowWrapper {
               ellipsizeMode="tail"
               style={
                 Object {
+                  "color": "rgba(255, 255, 255, 1)",
                   "fontSize": 24,
                   "fontWeight": "500",
                 }
@@ -140,7 +243,9 @@ ShallowWrapper {
             </Text>,
             "style": Object {
               "alignItems": "center",
+              "height": 150,
               "justifyContent": "center",
+              "width": "100%",
             },
           },
           "ref": null,
@@ -154,6 +259,7 @@ ShallowWrapper {
               "children": "",
               "ellipsizeMode": "tail",
               "style": Object {
+                "color": "rgba(255, 255, 255, 1)",
                 "fontSize": 24,
                 "fontWeight": "500",
               },
@@ -169,48 +275,181 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "activeOpacity": 0.2,
-            "children": <View>
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
+            "children": Array [
+              <Icon
+                allowFontScaling={false}
+                color="rgba(255, 255, 255, 1)"
+                name="edit"
+                onPress={[Function]}
+                size={32}
+              />,
+              <TouchableOpacity
+                activeOpacity={0.2}
               >
-                Attach media
-              </Text>
-            </View>,
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "borderColor": "rgba(255, 255, 255, 1)",
+                      "borderRadius": 5,
+                      "borderWidth": 2,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 10,
+                      "paddingVertical": 10,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "rgba(255, 255, 255, 1)",
+                        "fontSize": 18,
+                        "fontWeight": "500",
+                      }
+                    }
+                  >
+                    Attach media
+                  </Text>
+                </View>
+              </TouchableOpacity>,
+              <Icon
+                allowFontScaling={false}
+                color="rgba(255, 255, 255, 1)"
+                name="check"
+                onPress={[Function]}
+                size={32}
+              />,
+            ],
+            "style": Object {
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+            },
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-              >
-                Attach media
-              </Text>,
-            },
-            "ref": null,
-            "rendered": Object {
+          "rendered": Array [
+            Object {
               "instance": null,
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "accessible": true,
-                "allowFontScaling": true,
-                "children": "Attach media",
-                "ellipsizeMode": "tail",
+                "allowFontScaling": false,
+                "color": "rgba(255, 255, 255, 1)",
+                "name": "edit",
+                "onPress": [Function],
+                "size": 32,
               },
               "ref": null,
-              "rendered": "Attach media",
+              "rendered": null,
               "type": [Function],
             },
-            "type": [Function],
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "activeOpacity": 0.2,
+                "children": <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "borderColor": "rgba(255, 255, 255, 1)",
+                      "borderRadius": 5,
+                      "borderWidth": 2,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 10,
+                      "paddingVertical": 10,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "rgba(255, 255, 255, 1)",
+                        "fontSize": 18,
+                        "fontWeight": "500",
+                      }
+                    }
+                  >
+                    Attach media
+                  </Text>
+                </View>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "rgba(255, 255, 255, 1)",
+                        "fontSize": 18,
+                        "fontWeight": "500",
+                      }
+                    }
+                  >
+                    Attach media
+                  </Text>,
+                  "style": Object {
+                    "alignItems": "center",
+                    "borderColor": "rgba(255, 255, 255, 1)",
+                    "borderRadius": 5,
+                    "borderWidth": 2,
+                    "justifyContent": "center",
+                    "paddingHorizontal": 10,
+                    "paddingVertical": 10,
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "accessible": true,
+                    "allowFontScaling": true,
+                    "children": "Attach media",
+                    "ellipsizeMode": "tail",
+                    "style": Object {
+                      "color": "rgba(255, 255, 255, 1)",
+                      "fontSize": 18,
+                      "fontWeight": "500",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "Attach media",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "allowFontScaling": false,
+                "color": "rgba(255, 255, 255, 1)",
+                "name": "check",
+                "onPress": [Function],
+                "size": 32,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
       ],
@@ -226,20 +465,27 @@ ShallowWrapper {
       "props": Object {
         "children": <View
           style={
-            Object {
-              "backgroundColor": "rgba(230, 230, 230, 1)",
-              "flex": 1,
-              "height": 250,
-              "justifyContent": "space-around",
-              "width": "100%",
-            }
+            Array [
+              Object {
+                "backgroundColor": "rgba(230, 230, 230, 1)",
+                "flex": 1,
+                "height": 250,
+                "justifyContent": "space-around",
+                "width": "100%",
+              },
+              Object {
+                "backgroundColor": "#353627",
+              },
+            ]
           }
         >
           <View
             style={
               Object {
                 "alignItems": "center",
+                "height": 150,
                 "justifyContent": "center",
+                "width": "100%",
               }
             }
           >
@@ -249,6 +495,7 @@ ShallowWrapper {
               ellipsizeMode="tail"
               style={
                 Object {
+                  "color": "rgba(255, 255, 255, 1)",
                   "fontSize": 24,
                   "fontWeight": "500",
                 }
@@ -257,19 +504,61 @@ ShallowWrapper {
               
             </Text>
           </View>
-          <TouchableOpacity
-            activeOpacity={0.2}
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+              }
+            }
           >
-            <View>
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
+            <Icon
+              allowFontScaling={false}
+              color="rgba(255, 255, 255, 1)"
+              name="edit"
+              onPress={[Function]}
+              size={32}
+            />
+            <TouchableOpacity
+              activeOpacity={0.2}
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "borderColor": "rgba(255, 255, 255, 1)",
+                    "borderRadius": 5,
+                    "borderWidth": 2,
+                    "justifyContent": "center",
+                    "paddingHorizontal": 10,
+                    "paddingVertical": 10,
+                  }
+                }
               >
-                Attach media
-              </Text>
-            </View>
-          </TouchableOpacity>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "rgba(255, 255, 255, 1)",
+                      "fontSize": 18,
+                      "fontWeight": "500",
+                    }
+                  }
+                >
+                  Attach media
+                </Text>
+              </View>
+            </TouchableOpacity>
+            <Icon
+              allowFontScaling={false}
+              color="rgba(255, 255, 255, 1)"
+              name="check"
+              onPress={[Function]}
+              size={32}
+            />
+          </View>
         </View>,
       },
       "ref": null,
@@ -283,7 +572,9 @@ ShallowWrapper {
               style={
                 Object {
                   "alignItems": "center",
+                  "height": 150,
                   "justifyContent": "center",
+                  "width": "100%",
                 }
               }
             >
@@ -293,6 +584,7 @@ ShallowWrapper {
                 ellipsizeMode="tail"
                 style={
                   Object {
+                    "color": "rgba(255, 255, 255, 1)",
                     "fontSize": 24,
                     "fontWeight": "500",
                   }
@@ -301,27 +593,74 @@ ShallowWrapper {
                 
               </Text>
             </View>,
-            <TouchableOpacity
-              activeOpacity={0.2}
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "space-around",
+                }
+              }
             >
-              <View>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+              <Icon
+                allowFontScaling={false}
+                color="rgba(255, 255, 255, 1)"
+                name="edit"
+                onPress={[Function]}
+                size={32}
+              />
+              <TouchableOpacity
+                activeOpacity={0.2}
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "borderColor": "rgba(255, 255, 255, 1)",
+                      "borderRadius": 5,
+                      "borderWidth": 2,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 10,
+                      "paddingVertical": 10,
+                    }
+                  }
                 >
-                  Attach media
-                </Text>
-              </View>
-            </TouchableOpacity>,
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "rgba(255, 255, 255, 1)",
+                        "fontSize": 18,
+                        "fontWeight": "500",
+                      }
+                    }
+                  >
+                    Attach media
+                  </Text>
+                </View>
+              </TouchableOpacity>
+              <Icon
+                allowFontScaling={false}
+                color="rgba(255, 255, 255, 1)"
+                name="check"
+                onPress={[Function]}
+                size={32}
+              />
+            </View>,
           ],
-          "style": Object {
-            "backgroundColor": "rgba(230, 230, 230, 1)",
-            "flex": 1,
-            "height": 250,
-            "justifyContent": "space-around",
-            "width": "100%",
-          },
+          "style": Array [
+            Object {
+              "backgroundColor": "rgba(230, 230, 230, 1)",
+              "flex": 1,
+              "height": 250,
+              "justifyContent": "space-around",
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#353627",
+            },
+          ],
         },
         "ref": null,
         "rendered": Array [
@@ -336,6 +675,7 @@ ShallowWrapper {
                 ellipsizeMode="tail"
                 style={
                   Object {
+                    "color": "rgba(255, 255, 255, 1)",
                     "fontSize": 24,
                     "fontWeight": "500",
                   }
@@ -345,7 +685,9 @@ ShallowWrapper {
               </Text>,
               "style": Object {
                 "alignItems": "center",
+                "height": 150,
                 "justifyContent": "center",
+                "width": "100%",
               },
             },
             "ref": null,
@@ -359,6 +701,7 @@ ShallowWrapper {
                 "children": "",
                 "ellipsizeMode": "tail",
                 "style": Object {
+                  "color": "rgba(255, 255, 255, 1)",
                   "fontSize": 24,
                   "fontWeight": "500",
                 },
@@ -374,48 +717,181 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "activeOpacity": 0.2,
-              "children": <View>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+              "children": Array [
+                <Icon
+                  allowFontScaling={false}
+                  color="rgba(255, 255, 255, 1)"
+                  name="edit"
+                  onPress={[Function]}
+                  size={32}
+                />,
+                <TouchableOpacity
+                  activeOpacity={0.2}
                 >
-                  Attach media
-                </Text>
-              </View>,
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "borderColor": "rgba(255, 255, 255, 1)",
+                        "borderRadius": 5,
+                        "borderWidth": 2,
+                        "justifyContent": "center",
+                        "paddingHorizontal": 10,
+                        "paddingVertical": 10,
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "rgba(255, 255, 255, 1)",
+                          "fontSize": 18,
+                          "fontWeight": "500",
+                        }
+                      }
+                    >
+                      Attach media
+                    </Text>
+                  </View>
+                </TouchableOpacity>,
+                <Icon
+                  allowFontScaling={false}
+                  color="rgba(255, 255, 255, 1)"
+                  name="check"
+                  onPress={[Function]}
+                  size={32}
+                />,
+              ],
+              "style": Object {
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+              },
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
-                >
-                  Attach media
-                </Text>,
-              },
-              "ref": null,
-              "rendered": Object {
+            "rendered": Array [
+              Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "accessible": true,
-                  "allowFontScaling": true,
-                  "children": "Attach media",
-                  "ellipsizeMode": "tail",
+                  "allowFontScaling": false,
+                  "color": "rgba(255, 255, 255, 1)",
+                  "name": "edit",
+                  "onPress": [Function],
+                  "size": 32,
                 },
                 "ref": null,
-                "rendered": "Attach media",
+                "rendered": null,
                 "type": [Function],
               },
-              "type": [Function],
-            },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "activeOpacity": 0.2,
+                  "children": <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "borderColor": "rgba(255, 255, 255, 1)",
+                        "borderRadius": 5,
+                        "borderWidth": 2,
+                        "justifyContent": "center",
+                        "paddingHorizontal": 10,
+                        "paddingVertical": 10,
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "rgba(255, 255, 255, 1)",
+                          "fontSize": 18,
+                          "fontWeight": "500",
+                        }
+                      }
+                    >
+                      Attach media
+                    </Text>
+                  </View>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "rgba(255, 255, 255, 1)",
+                          "fontSize": 18,
+                          "fontWeight": "500",
+                        }
+                      }
+                    >
+                      Attach media
+                    </Text>,
+                    "style": Object {
+                      "alignItems": "center",
+                      "borderColor": "rgba(255, 255, 255, 1)",
+                      "borderRadius": 5,
+                      "borderWidth": 2,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 10,
+                      "paddingVertical": 10,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": "Attach media",
+                      "ellipsizeMode": "tail",
+                      "style": Object {
+                        "color": "rgba(255, 255, 255, 1)",
+                        "fontSize": 18,
+                        "fontWeight": "500",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "Attach media",
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "allowFontScaling": false,
+                  "color": "rgba(255, 255, 255, 1)",
+                  "name": "check",
+                  "onPress": [Function],
+                  "size": 32,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
             "type": [Function],
           },
         ],
@@ -440,6 +916,8 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ToDoListItem
     contentText="Need to buy biscuits"
+    onComplete={[Function]}
+    onEditDone={[Function]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -455,20 +933,27 @@ ShallowWrapper {
     "props": Object {
       "children": <View
         style={
-          Object {
-            "backgroundColor": "rgba(230, 230, 230, 1)",
-            "flex": 1,
-            "height": 250,
-            "justifyContent": "space-around",
-            "width": "100%",
-          }
+          Array [
+            Object {
+              "backgroundColor": "rgba(230, 230, 230, 1)",
+              "flex": 1,
+              "height": 250,
+              "justifyContent": "space-around",
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#844509",
+            },
+          ]
         }
       >
         <View
           style={
             Object {
               "alignItems": "center",
+              "height": 150,
               "justifyContent": "center",
+              "width": "100%",
             }
           }
         >
@@ -478,27 +963,70 @@ ShallowWrapper {
             ellipsizeMode="tail"
             style={
               Object {
+                "color": "rgba(255, 255, 255, 1)",
                 "fontSize": 24,
                 "fontWeight": "500",
               }
             }
           >
-            Need to buy biscuits
+            
           </Text>
         </View>
-        <TouchableOpacity
-          activeOpacity={0.2}
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+            }
+          }
         >
-          <View>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+          <Icon
+            allowFontScaling={false}
+            color="rgba(255, 255, 255, 1)"
+            name="edit"
+            onPress={[Function]}
+            size={32}
+          />
+          <TouchableOpacity
+            activeOpacity={0.2}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(255, 255, 255, 1)",
+                  "borderRadius": 5,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "paddingHorizontal": 10,
+                  "paddingVertical": 10,
+                }
+              }
             >
-              Attach media
-            </Text>
-          </View>
-        </TouchableOpacity>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(255, 255, 255, 1)",
+                    "fontSize": 18,
+                    "fontWeight": "500",
+                  }
+                }
+              >
+                Attach media
+              </Text>
+            </View>
+          </TouchableOpacity>
+          <Icon
+            allowFontScaling={false}
+            color="rgba(255, 255, 255, 1)"
+            name="check"
+            onPress={[Function]}
+            size={32}
+          />
+        </View>
       </View>,
     },
     "ref": null,
@@ -512,7 +1040,9 @@ ShallowWrapper {
             style={
               Object {
                 "alignItems": "center",
+                "height": 150,
                 "justifyContent": "center",
+                "width": "100%",
               }
             }
           >
@@ -522,35 +1052,83 @@ ShallowWrapper {
               ellipsizeMode="tail"
               style={
                 Object {
+                  "color": "rgba(255, 255, 255, 1)",
                   "fontSize": 24,
                   "fontWeight": "500",
                 }
               }
             >
-              Need to buy biscuits
+              
             </Text>
           </View>,
-          <TouchableOpacity
-            activeOpacity={0.2}
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+              }
+            }
           >
-            <View>
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
+            <Icon
+              allowFontScaling={false}
+              color="rgba(255, 255, 255, 1)"
+              name="edit"
+              onPress={[Function]}
+              size={32}
+            />
+            <TouchableOpacity
+              activeOpacity={0.2}
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "borderColor": "rgba(255, 255, 255, 1)",
+                    "borderRadius": 5,
+                    "borderWidth": 2,
+                    "justifyContent": "center",
+                    "paddingHorizontal": 10,
+                    "paddingVertical": 10,
+                  }
+                }
               >
-                Attach media
-              </Text>
-            </View>
-          </TouchableOpacity>,
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "rgba(255, 255, 255, 1)",
+                      "fontSize": 18,
+                      "fontWeight": "500",
+                    }
+                  }
+                >
+                  Attach media
+                </Text>
+              </View>
+            </TouchableOpacity>
+            <Icon
+              allowFontScaling={false}
+              color="rgba(255, 255, 255, 1)"
+              name="check"
+              onPress={[Function]}
+              size={32}
+            />
+          </View>,
         ],
-        "style": Object {
-          "backgroundColor": "rgba(230, 230, 230, 1)",
-          "flex": 1,
-          "height": 250,
-          "justifyContent": "space-around",
-          "width": "100%",
-        },
+        "style": Array [
+          Object {
+            "backgroundColor": "rgba(230, 230, 230, 1)",
+            "flex": 1,
+            "height": 250,
+            "justifyContent": "space-around",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "#844509",
+          },
+        ],
       },
       "ref": null,
       "rendered": Array [
@@ -565,16 +1143,19 @@ ShallowWrapper {
               ellipsizeMode="tail"
               style={
                 Object {
+                  "color": "rgba(255, 255, 255, 1)",
                   "fontSize": 24,
                   "fontWeight": "500",
                 }
               }
             >
-              Need to buy biscuits
+              
             </Text>,
             "style": Object {
               "alignItems": "center",
+              "height": 150,
               "justifyContent": "center",
+              "width": "100%",
             },
           },
           "ref": null,
@@ -585,15 +1166,16 @@ ShallowWrapper {
             "props": Object {
               "accessible": true,
               "allowFontScaling": true,
-              "children": "Need to buy biscuits",
+              "children": "",
               "ellipsizeMode": "tail",
               "style": Object {
+                "color": "rgba(255, 255, 255, 1)",
                 "fontSize": 24,
                 "fontWeight": "500",
               },
             },
             "ref": null,
-            "rendered": "Need to buy biscuits",
+            "rendered": "",
             "type": [Function],
           },
           "type": [Function],
@@ -603,48 +1185,181 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "activeOpacity": 0.2,
-            "children": <View>
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
+            "children": Array [
+              <Icon
+                allowFontScaling={false}
+                color="rgba(255, 255, 255, 1)"
+                name="edit"
+                onPress={[Function]}
+                size={32}
+              />,
+              <TouchableOpacity
+                activeOpacity={0.2}
               >
-                Attach media
-              </Text>
-            </View>,
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "borderColor": "rgba(255, 255, 255, 1)",
+                      "borderRadius": 5,
+                      "borderWidth": 2,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 10,
+                      "paddingVertical": 10,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "rgba(255, 255, 255, 1)",
+                        "fontSize": 18,
+                        "fontWeight": "500",
+                      }
+                    }
+                  >
+                    Attach media
+                  </Text>
+                </View>
+              </TouchableOpacity>,
+              <Icon
+                allowFontScaling={false}
+                color="rgba(255, 255, 255, 1)"
+                name="check"
+                onPress={[Function]}
+                size={32}
+              />,
+            ],
+            "style": Object {
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+            },
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-              >
-                Attach media
-              </Text>,
-            },
-            "ref": null,
-            "rendered": Object {
+          "rendered": Array [
+            Object {
               "instance": null,
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "accessible": true,
-                "allowFontScaling": true,
-                "children": "Attach media",
-                "ellipsizeMode": "tail",
+                "allowFontScaling": false,
+                "color": "rgba(255, 255, 255, 1)",
+                "name": "edit",
+                "onPress": [Function],
+                "size": 32,
               },
               "ref": null,
-              "rendered": "Attach media",
+              "rendered": null,
               "type": [Function],
             },
-            "type": [Function],
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "activeOpacity": 0.2,
+                "children": <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "borderColor": "rgba(255, 255, 255, 1)",
+                      "borderRadius": 5,
+                      "borderWidth": 2,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 10,
+                      "paddingVertical": 10,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "rgba(255, 255, 255, 1)",
+                        "fontSize": 18,
+                        "fontWeight": "500",
+                      }
+                    }
+                  >
+                    Attach media
+                  </Text>
+                </View>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "rgba(255, 255, 255, 1)",
+                        "fontSize": 18,
+                        "fontWeight": "500",
+                      }
+                    }
+                  >
+                    Attach media
+                  </Text>,
+                  "style": Object {
+                    "alignItems": "center",
+                    "borderColor": "rgba(255, 255, 255, 1)",
+                    "borderRadius": 5,
+                    "borderWidth": 2,
+                    "justifyContent": "center",
+                    "paddingHorizontal": 10,
+                    "paddingVertical": 10,
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "accessible": true,
+                    "allowFontScaling": true,
+                    "children": "Attach media",
+                    "ellipsizeMode": "tail",
+                    "style": Object {
+                      "color": "rgba(255, 255, 255, 1)",
+                      "fontSize": 18,
+                      "fontWeight": "500",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "Attach media",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "allowFontScaling": false,
+                "color": "rgba(255, 255, 255, 1)",
+                "name": "check",
+                "onPress": [Function],
+                "size": 32,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
       ],
@@ -660,20 +1375,27 @@ ShallowWrapper {
       "props": Object {
         "children": <View
           style={
-            Object {
-              "backgroundColor": "rgba(230, 230, 230, 1)",
-              "flex": 1,
-              "height": 250,
-              "justifyContent": "space-around",
-              "width": "100%",
-            }
+            Array [
+              Object {
+                "backgroundColor": "rgba(230, 230, 230, 1)",
+                "flex": 1,
+                "height": 250,
+                "justifyContent": "space-around",
+                "width": "100%",
+              },
+              Object {
+                "backgroundColor": "#844509",
+              },
+            ]
           }
         >
           <View
             style={
               Object {
                 "alignItems": "center",
+                "height": 150,
                 "justifyContent": "center",
+                "width": "100%",
               }
             }
           >
@@ -683,27 +1405,70 @@ ShallowWrapper {
               ellipsizeMode="tail"
               style={
                 Object {
+                  "color": "rgba(255, 255, 255, 1)",
                   "fontSize": 24,
                   "fontWeight": "500",
                 }
               }
             >
-              Need to buy biscuits
+              
             </Text>
           </View>
-          <TouchableOpacity
-            activeOpacity={0.2}
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+              }
+            }
           >
-            <View>
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
+            <Icon
+              allowFontScaling={false}
+              color="rgba(255, 255, 255, 1)"
+              name="edit"
+              onPress={[Function]}
+              size={32}
+            />
+            <TouchableOpacity
+              activeOpacity={0.2}
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "borderColor": "rgba(255, 255, 255, 1)",
+                    "borderRadius": 5,
+                    "borderWidth": 2,
+                    "justifyContent": "center",
+                    "paddingHorizontal": 10,
+                    "paddingVertical": 10,
+                  }
+                }
               >
-                Attach media
-              </Text>
-            </View>
-          </TouchableOpacity>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "rgba(255, 255, 255, 1)",
+                      "fontSize": 18,
+                      "fontWeight": "500",
+                    }
+                  }
+                >
+                  Attach media
+                </Text>
+              </View>
+            </TouchableOpacity>
+            <Icon
+              allowFontScaling={false}
+              color="rgba(255, 255, 255, 1)"
+              name="check"
+              onPress={[Function]}
+              size={32}
+            />
+          </View>
         </View>,
       },
       "ref": null,
@@ -717,7 +1482,9 @@ ShallowWrapper {
               style={
                 Object {
                   "alignItems": "center",
+                  "height": 150,
                   "justifyContent": "center",
+                  "width": "100%",
                 }
               }
             >
@@ -727,35 +1494,83 @@ ShallowWrapper {
                 ellipsizeMode="tail"
                 style={
                   Object {
+                    "color": "rgba(255, 255, 255, 1)",
                     "fontSize": 24,
                     "fontWeight": "500",
                   }
                 }
               >
-                Need to buy biscuits
+                
               </Text>
             </View>,
-            <TouchableOpacity
-              activeOpacity={0.2}
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "space-around",
+                }
+              }
             >
-              <View>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+              <Icon
+                allowFontScaling={false}
+                color="rgba(255, 255, 255, 1)"
+                name="edit"
+                onPress={[Function]}
+                size={32}
+              />
+              <TouchableOpacity
+                activeOpacity={0.2}
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "borderColor": "rgba(255, 255, 255, 1)",
+                      "borderRadius": 5,
+                      "borderWidth": 2,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 10,
+                      "paddingVertical": 10,
+                    }
+                  }
                 >
-                  Attach media
-                </Text>
-              </View>
-            </TouchableOpacity>,
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "rgba(255, 255, 255, 1)",
+                        "fontSize": 18,
+                        "fontWeight": "500",
+                      }
+                    }
+                  >
+                    Attach media
+                  </Text>
+                </View>
+              </TouchableOpacity>
+              <Icon
+                allowFontScaling={false}
+                color="rgba(255, 255, 255, 1)"
+                name="check"
+                onPress={[Function]}
+                size={32}
+              />
+            </View>,
           ],
-          "style": Object {
-            "backgroundColor": "rgba(230, 230, 230, 1)",
-            "flex": 1,
-            "height": 250,
-            "justifyContent": "space-around",
-            "width": "100%",
-          },
+          "style": Array [
+            Object {
+              "backgroundColor": "rgba(230, 230, 230, 1)",
+              "flex": 1,
+              "height": 250,
+              "justifyContent": "space-around",
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#844509",
+            },
+          ],
         },
         "ref": null,
         "rendered": Array [
@@ -770,16 +1585,19 @@ ShallowWrapper {
                 ellipsizeMode="tail"
                 style={
                   Object {
+                    "color": "rgba(255, 255, 255, 1)",
                     "fontSize": 24,
                     "fontWeight": "500",
                   }
                 }
               >
-                Need to buy biscuits
+                
               </Text>,
               "style": Object {
                 "alignItems": "center",
+                "height": 150,
                 "justifyContent": "center",
+                "width": "100%",
               },
             },
             "ref": null,
@@ -790,15 +1608,16 @@ ShallowWrapper {
               "props": Object {
                 "accessible": true,
                 "allowFontScaling": true,
-                "children": "Need to buy biscuits",
+                "children": "",
                 "ellipsizeMode": "tail",
                 "style": Object {
+                  "color": "rgba(255, 255, 255, 1)",
                   "fontSize": 24,
                   "fontWeight": "500",
                 },
               },
               "ref": null,
-              "rendered": "Need to buy biscuits",
+              "rendered": "",
               "type": [Function],
             },
             "type": [Function],
@@ -808,48 +1627,181 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "activeOpacity": 0.2,
-              "children": <View>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+              "children": Array [
+                <Icon
+                  allowFontScaling={false}
+                  color="rgba(255, 255, 255, 1)"
+                  name="edit"
+                  onPress={[Function]}
+                  size={32}
+                />,
+                <TouchableOpacity
+                  activeOpacity={0.2}
                 >
-                  Attach media
-                </Text>
-              </View>,
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "borderColor": "rgba(255, 255, 255, 1)",
+                        "borderRadius": 5,
+                        "borderWidth": 2,
+                        "justifyContent": "center",
+                        "paddingHorizontal": 10,
+                        "paddingVertical": 10,
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "rgba(255, 255, 255, 1)",
+                          "fontSize": 18,
+                          "fontWeight": "500",
+                        }
+                      }
+                    >
+                      Attach media
+                    </Text>
+                  </View>
+                </TouchableOpacity>,
+                <Icon
+                  allowFontScaling={false}
+                  color="rgba(255, 255, 255, 1)"
+                  name="check"
+                  onPress={[Function]}
+                  size={32}
+                />,
+              ],
+              "style": Object {
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+              },
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
-                >
-                  Attach media
-                </Text>,
-              },
-              "ref": null,
-              "rendered": Object {
+            "rendered": Array [
+              Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "accessible": true,
-                  "allowFontScaling": true,
-                  "children": "Attach media",
-                  "ellipsizeMode": "tail",
+                  "allowFontScaling": false,
+                  "color": "rgba(255, 255, 255, 1)",
+                  "name": "edit",
+                  "onPress": [Function],
+                  "size": 32,
                 },
                 "ref": null,
-                "rendered": "Attach media",
+                "rendered": null,
                 "type": [Function],
               },
-              "type": [Function],
-            },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "activeOpacity": 0.2,
+                  "children": <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "borderColor": "rgba(255, 255, 255, 1)",
+                        "borderRadius": 5,
+                        "borderWidth": 2,
+                        "justifyContent": "center",
+                        "paddingHorizontal": 10,
+                        "paddingVertical": 10,
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "rgba(255, 255, 255, 1)",
+                          "fontSize": 18,
+                          "fontWeight": "500",
+                        }
+                      }
+                    >
+                      Attach media
+                    </Text>
+                  </View>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "rgba(255, 255, 255, 1)",
+                          "fontSize": 18,
+                          "fontWeight": "500",
+                        }
+                      }
+                    >
+                      Attach media
+                    </Text>,
+                    "style": Object {
+                      "alignItems": "center",
+                      "borderColor": "rgba(255, 255, 255, 1)",
+                      "borderRadius": 5,
+                      "borderWidth": 2,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 10,
+                      "paddingVertical": 10,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": "Attach media",
+                      "ellipsizeMode": "tail",
+                      "style": Object {
+                        "color": "rgba(255, 255, 255, 1)",
+                        "fontSize": 18,
+                        "fontWeight": "500",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "Attach media",
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "allowFontScaling": false,
+                  "color": "rgba(255, 255, 255, 1)",
+                  "name": "check",
+                  "onPress": [Function],
+                  "size": 32,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
             "type": [Function],
           },
         ],

@@ -3,6 +3,7 @@ import {
   Image,
   Platform,
   ScrollView,
+  KeyboardAvoidingView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -18,20 +19,32 @@ class HomeContainer extends Component {
     header: null,
   };
 
+  saveEditedToDo = () => {
+  }
+
+  onToDoTaskComplete = () => {
+
+  }
+
   render() {
     return (
-      <View style={styles.container}>
+      <KeyboardAvoidingView style={styles.container} behavior={'padding'}>
         <ScrollView style={styles.container} >
           <ToDoListItem
-            contentText={"Need to buy biscuits"}
+            contentText={"Need to buy biscuits."}
+            onEditDone={this.saveEditedToDo}
+            onComplete={this.onToDoTaskComplete}
           />
-          <ToDoListItem/>
-          <ToDoListItem/>
+          <ToDoListItem
+            contentText={"Need to buy Tomato"}
+            onEditDone={this.saveEditedToDo}
+            onComplete={this.onToDoTaskComplete}
+          />
         </ScrollView>
 
         <FloatingButton />
 
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }
