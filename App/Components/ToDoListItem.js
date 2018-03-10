@@ -7,6 +7,8 @@ import {
 } from 'react-native';
 import Card from './Card';
 
+import PropTypes from 'prop-types';
+
 
 class ToDoListItem extends Component {
 	constructor(props) {
@@ -53,7 +55,10 @@ const styles = StyleSheet.create({
 
 ToDoListItem.defaultProps = {
     contentText: "",
+}
 
+ToDoListItem.propTypes = {
+    contentText: PropTypes.string,
 }
 
 export default ToDoListItem;
