@@ -46,13 +46,17 @@ class ToDoListItem extends Component {
                     onChangeText={this.changeContentText}
                     underlineColorAndroid={'transparent'}
                     multiline
+                    autoFocus
                     maxHeight={100}
                     numberOfLine={4}
                 />
             )
         }
         return (
-          <Text style={styles.contentTextStyle}>
+          <Text
+            style={styles.contentTextStyle}
+            numberOfLines={5}
+          >
             {this.state.contentText}
           </Text>
         )
@@ -61,18 +65,14 @@ class ToDoListItem extends Component {
 	render (){
         return (
           <Card>
-            <View style={[styles.cardContainerStyle, {backgroundColor: Colors.getRandomColor()}]}>
+            <View style={[styles.cardContainerStyle, {backgroundColor: 'white'}]}>
               <View style={styles.contentContainerStyle}>
                 {this.renderContentText()}
               </View>
-              <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>
-                <Entypo name="edit" size={32} color={Colors.white} onPress={this.onPressEdit}/>
-                <TouchableOpacity onPress={this.props.onAttachMedia}>
-                    <View style={styles.attachMediaStyle}>
-                    <Text style={styles.mediaTextStyle}>Attach media</Text>
-                    </View>
-                </TouchableOpacity>
-                <Entypo name="check" size={32} color={Colors.white} onPress={this.props.onComplete}/>
+              <View style={{ flexDirection: 'row', justifyContent: 'space-around', borderTopWidth: 1, borderColor: Colors.tintColor}}>
+                <Entypo name="edit" size={24} color={Colors.tintColor} onPress={this.onPressEdit} style={{ paddingTop: 15 }}/>
+                <Entypo name="attachment" size={24} color={Colors.tintColor} onPress={this.props.onAttachMedia} style={{ paddingTop: 15 }}/>
+                <Entypo name="check" size={24} color={Colors.tintColor} onPress={this.props.onComplete} style={{ paddingTop: 15 }}/>
               </View>
             </View>
           </Card>
@@ -92,25 +92,21 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: "100%",
-        height: 150
+        height: 150,
+        margin: 5,
     },
     contentTextInputStyle: {
         fontWeight: '500',
-        fontSize: 24,
-        color: Colors.white,
+        fontSize: 16,
+        color: Colors.black,
         width: '100%',
         height: '100%',
-        backgroundColor: 'black'
+        backgroundColor: 'transparent'
     },
     contentTextStyle: {
         fontWeight: '500',
-        fontSize: 24,
-        color: Colors.white
-    },
-    mediaTextStyle: {
-        fontWeight: '500',
-        fontSize: 18,
-        color: Colors.white
+        fontSize: 16,
+        color: Colors.black
     },
     attachMediaStyle: {
         borderRadius: 5,
@@ -119,7 +115,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: Colors.white
+        borderColor: Colors.tintColor
     }
 });
 

@@ -17,7 +17,7 @@ const RootStackNavigator = (isAuthenticated) => {
         Main: {
           screen: MainTabNavigator
         },
-        New: {
+        NewToDo: {
           screen: NewToDoContainer
         }
       },

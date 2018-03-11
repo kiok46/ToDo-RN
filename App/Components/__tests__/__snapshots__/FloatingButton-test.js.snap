@@ -19,7 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": <Icon
         allowFontScaling={false}
-        color="white"
+        color="rgba(255, 255, 255, 1)"
         name="plus"
         onPress={undefined}
         size={32}
@@ -27,7 +27,7 @@ ShallowWrapper {
       "style": Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "brown",
+          "backgroundColor": "#2f95dc",
           "borderRadius": 30,
           "bottom": 30,
           "height": 60,
@@ -45,7 +45,7 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "allowFontScaling": false,
-        "color": "white",
+        "color": "rgba(255, 255, 255, 1)",
         "name": "plus",
         "onPress": undefined,
         "size": 32,
@@ -64,7 +64,7 @@ ShallowWrapper {
       "props": Object {
         "children": <Icon
           allowFontScaling={false}
-          color="white"
+          color="rgba(255, 255, 255, 1)"
           name="plus"
           onPress={undefined}
           size={32}
@@ -72,7 +72,7 @@ ShallowWrapper {
         "style": Array [
           Object {
             "alignItems": "center",
-            "backgroundColor": "brown",
+            "backgroundColor": "#2f95dc",
             "borderRadius": 30,
             "bottom": 30,
             "height": 60,
@@ -90,7 +90,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "allowFontScaling": false,
-          "color": "white",
+          "color": "rgba(255, 255, 255, 1)",
           "name": "plus",
           "onPress": undefined,
           "size": 32,

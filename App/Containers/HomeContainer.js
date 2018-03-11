@@ -19,6 +19,10 @@ class HomeContainer extends Component {
     header: null,
   };
 
+  componentWillMount() {
+    // const p = this.props.getToDoListData()
+  }
+
   saveEditedToDo = () => {
 
   }
@@ -49,7 +53,7 @@ class HomeContainer extends Component {
           />
         </ScrollView>
 
-        <FloatingButton onPress={() => {this.props.navigation.navigate('New')}}/>
+        <FloatingButton onPress={() => {this.props.navigation.navigate('NewToDo')}}/>
 
       </KeyboardAvoidingView>
     );

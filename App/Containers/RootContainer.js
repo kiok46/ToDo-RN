@@ -28,7 +28,7 @@ class RootContainer extends Component {
       if (this.props.loggedIn !== null) {
         return (
           <View style={styles.container}>
-            {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+            {Platform.OS === 'ios' && <StatusBar barStyle="dark-content" />}
             {Platform.OS === 'android' && <View style={styles.statusBarUnderlay} />}
             <RootNavigation isAuthenticated={this.props.loggedIn ? true : false}/>
           </View>
