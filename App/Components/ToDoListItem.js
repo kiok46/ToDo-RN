@@ -7,10 +7,10 @@ import {
     TouchableOpacity
 } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
+import PropTypes from 'prop-types';
 
 import Card from './Card';
 import Colors from '../Utils/Colors';
-import PropTypes from 'prop-types';
 
 
 class ToDoListItem extends Component {
@@ -69,7 +69,7 @@ class ToDoListItem extends Component {
               <View style={styles.contentContainerStyle}>
                 {this.renderContentText()}
               </View>
-              <View>
+              <View style={{ paddingHorizontal: 10 }}>
                   <Text>
                     Ends at:  {this.props.endAt}
                   </Text>

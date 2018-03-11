@@ -21,6 +21,8 @@ class NewToDoContainer extends Component {
     };
   state = {
     isDateTimePickerVisible: false,
+    contentText: "",
+    date: "never",
   };
 
 
@@ -33,8 +35,13 @@ class NewToDoContainer extends Component {
   }
 
   _handleDatePicked = (date) => {
+    this.setState({ date: date.toString() })
     this._hideDateTimePicker();
   };
+
+  changeContentText = (contentText) => {
+    this.setState({ contentText })
+}
 
   render() {
     return (
@@ -48,9 +55,16 @@ class NewToDoContainer extends Component {
           <TextInput
             style={{ backgroundColor: '#eee', height: 200 }}
             placeholder={"Enter your task details"}
+            value={this.state.contentText}
+            onChangeText={this.changeContentText}
             multiline
             autoFocus
           />
+        </View>
+        <View style={{ paddingHorizontal: 10 }}>
+            <Text style={{ fontSize: 16, fontWeight: '300' }}>
+              Time selected: {this.state.date}
+            </Text>
         </View>
         <Button
             onPress={this._showDateTimePicker}

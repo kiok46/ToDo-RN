@@ -1,6 +1,5 @@
 import {
     GET_TODO_DATA,
-    SET_TODO_DATA,
     RETURN_EMPTY_TODO
 } from '../Actions/types';
 

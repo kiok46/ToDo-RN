@@ -29,7 +29,6 @@ todo_data = [
         content: "Need to buy biscuits",
         media_attached_uri: null,
         completed: false,
-        created_at: new Date(),
         ends_at: new Date()
     }
 ]
