@@ -48,7 +48,7 @@ class ToDoListItem extends Component {
                     multiline
                     autoFocus
                     maxHeight={100}
-                    numberOfLine={4}
+                    numberOfLine={5}
                 />
             )
         }
@@ -68,6 +68,11 @@ class ToDoListItem extends Component {
             <View style={[styles.cardContainerStyle, {backgroundColor: 'white'}]}>
               <View style={styles.contentContainerStyle}>
                 {this.renderContentText()}
+              </View>
+              <View>
+                  <Text>
+                    Ends at:  {this.props.endAt}
+                  </Text>
               </View>
               <View style={{ flexDirection: 'row', justifyContent: 'space-around', borderTopWidth: 1, borderColor: Colors.tintColor}}>
                 <Entypo name="edit" size={24} color={Colors.tintColor} onPress={this.onPressEdit} style={{ paddingTop: 15 }}/>
@@ -122,6 +127,7 @@ const styles = StyleSheet.create({
 
 ToDoListItem.defaultProps = {
     contentText: "",
+    endAt: "Never",
     onEditDone: () => {},
     onComplete: () => {},
     onAttachMedia: () => {}
@@ -129,6 +135,7 @@ ToDoListItem.defaultProps = {
 
 ToDoListItem.propTypes = {
     contentText: PropTypes.string,
+    endAt: PropTypes.string,
     onEditDone: PropTypes.func,
     onComplete: PropTypes.func,
     onAttachMedia: PropTypes.func
