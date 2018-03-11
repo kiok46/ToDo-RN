@@ -6,7 +6,9 @@ import {
 } from 'react-native';
 
 import { connect } from 'react-redux'
-import { isLoggedIn, googleLogout } from '../Actions/googleAuth'
+import { eraseToDoData, googleLogout } from '../Actions'
+
+import Button from '../Components/Button';
 
 
 class SettingsContainer extends Component {
@@ -22,28 +24,25 @@ class SettingsContainer extends Component {
   logout = () => {
     if (this.props.loggedIn){
       this.props.googleLogout()
+      this.props.eraseToDoData()
       this.props.navigation.navigate('Auth')
     }
   }
 
   render() {
     return (
-      <TouchableOpacity onPress={this.logout}>
-        <View>
-            <Text>
-              logout
-            </Text>
-        </View>
-      </TouchableOpacity>
+      <View>
+        <Button text={"Notification Settings"} onPress={this.logout}/>
+        <Button text={"logout"} onPress={this.logout}/>
+      </View>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
     loggedIn: state.GoogleAuth.loggedIn
   }
 }
 
-export default connect(mapStateToProps, { isLoggedIn, googleLogout })(SettingsContainer);
+export default connect(mapStateToProps, { eraseToDoData, googleLogout })(SettingsContainer);

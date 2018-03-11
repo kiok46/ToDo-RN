@@ -55,7 +55,6 @@ const styles = StyleSheet.create({
 const mapStateToProps = (state) => {
     return {
         loggedIn: state.GoogleAuth.loggedIn,
-        accessToken: state.GoogleAuth.accessToken,
     }
 }
 

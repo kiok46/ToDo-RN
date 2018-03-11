@@ -34,7 +34,7 @@ ShallowWrapper {
               "width": "100%",
             },
             Object {
-              "backgroundColor": "white",
+              "backgroundColor": "rgba(255, 255, 255, 1)",
             },
           ]
         }
@@ -66,7 +66,13 @@ ShallowWrapper {
             
           </Text>
         </View>
-        <View>
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 10,
+            }
+          }
+        >
           <Text
             accessible={true}
             allowFontScaling={true}
@@ -159,7 +165,13 @@ ShallowWrapper {
               
             </Text>
           </View>,
-          <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 10,
+              }
+            }
+          >
             <Text
               accessible={true}
               allowFontScaling={true}
@@ -226,7 +238,7 @@ ShallowWrapper {
             "width": "100%",
           },
           Object {
-            "backgroundColor": "white",
+            "backgroundColor": "rgba(255, 255, 255, 1)",
           },
         ],
       },
@@ -296,6 +308,9 @@ ShallowWrapper {
               Ends at:  
               Never
             </Text>,
+            "style": Object {
+              "paddingHorizontal": 10,
+            },
           },
           "ref": null,
           "rendered": Object {
@@ -451,7 +466,7 @@ ShallowWrapper {
                 "width": "100%",
               },
               Object {
-                "backgroundColor": "white",
+                "backgroundColor": "rgba(255, 255, 255, 1)",
               },
             ]
           }
@@ -483,7 +498,13 @@ ShallowWrapper {
               
             </Text>
           </View>
-          <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 10,
+              }
+            }
+          >
             <Text
               accessible={true}
               allowFontScaling={true}
@@ -576,7 +597,13 @@ ShallowWrapper {
                 
               </Text>
             </View>,
-            <View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 10,
+                }
+              }
+            >
               <Text
                 accessible={true}
                 allowFontScaling={true}
@@ -643,7 +670,7 @@ ShallowWrapper {
               "width": "100%",
             },
             Object {
-              "backgroundColor": "white",
+              "backgroundColor": "rgba(255, 255, 255, 1)",
             },
           ],
         },
@@ -713,6 +740,9 @@ ShallowWrapper {
                 Ends at:  
                 Never
               </Text>,
+              "style": Object {
+                "paddingHorizontal": 10,
+              },
             },
             "ref": null,
             "rendered": Object {
@@ -896,7 +926,7 @@ ShallowWrapper {
               "width": "100%",
             },
             Object {
-              "backgroundColor": "white",
+              "backgroundColor": "rgba(255, 255, 255, 1)",
             },
           ]
         }
@@ -928,7 +958,13 @@ ShallowWrapper {
             
           </Text>
         </View>
-        <View>
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 10,
+            }
+          }
+        >
           <Text
             accessible={true}
             allowFontScaling={true}
@@ -1021,7 +1057,13 @@ ShallowWrapper {
               
             </Text>
           </View>,
-          <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 10,
+              }
+            }
+          >
             <Text
               accessible={true}
               allowFontScaling={true}
@@ -1088,7 +1130,7 @@ ShallowWrapper {
             "width": "100%",
           },
           Object {
-            "backgroundColor": "white",
+            "backgroundColor": "rgba(255, 255, 255, 1)",
           },
         ],
       },
@@ -1158,6 +1200,9 @@ ShallowWrapper {
               Ends at:  
               Never
             </Text>,
+            "style": Object {
+              "paddingHorizontal": 10,
+            },
           },
           "ref": null,
           "rendered": Object {
@@ -1313,7 +1358,7 @@ ShallowWrapper {
                 "width": "100%",
               },
               Object {
-                "backgroundColor": "white",
+                "backgroundColor": "rgba(255, 255, 255, 1)",
               },
             ]
           }
@@ -1345,7 +1390,13 @@ ShallowWrapper {
               
             </Text>
           </View>
-          <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 10,
+              }
+            }
+          >
             <Text
               accessible={true}
               allowFontScaling={true}
@@ -1438,7 +1489,13 @@ ShallowWrapper {
                 
               </Text>
             </View>,
-            <View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 10,
+                }
+              }
+            >
               <Text
                 accessible={true}
                 allowFontScaling={true}
@@ -1505,7 +1562,7 @@ ShallowWrapper {
               "width": "100%",
             },
             Object {
-              "backgroundColor": "white",
+              "backgroundColor": "rgba(255, 255, 255, 1)",
             },
           ],
         },
@@ -1575,6 +1632,9 @@ ShallowWrapper {
                 Ends at:  
                 Never
               </Text>,
+              "style": Object {
+                "paddingHorizontal": 10,
+              },
             },
             "ref": null,
             "rendered": Object {

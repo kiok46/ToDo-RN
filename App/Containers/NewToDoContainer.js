@@ -9,6 +9,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { connect } from 'react-redux';
+import { addToDoItem } from '../Actions';
 
 import DateTimePicker from 'react-native-modal-datetime-picker';
 import Button from '../Components/Button';
@@ -41,7 +43,19 @@ class NewToDoContainer extends Component {
 
   changeContentText = (contentText) => {
     this.setState({ contentText })
-}
+  }
+
+  createToDoTask = () =>{
+    let todo_data = {
+      content: this.state.contentText,
+      media_attached_uri: null,
+      ends_at: this.state.date
+    }
+
+    this.props.navigation.navigate('Home')
+    this.setState({ contentText: "", date: "" })
+    this.props.addToDoItem(todo_data)
+  }
 
   render() {
     return (
@@ -71,7 +85,7 @@ class NewToDoContainer extends Component {
             text={"Select ending time"}
         />
         <Button
-            onPress={() => {}}
+            onPress={this.createToDoTask}
             text={"Create task"}
         />
         <DateTimePicker
@@ -103,5 +117,11 @@ const styles = StyleSheet.create({
   },
 });
 
+const mapStateToProps = (state) => {
+  return {
 
-export default NewToDoContainer;
+  }
+}
+
+
+export default connect( mapStateToProps, { addToDoItem })(NewToDoContainer);

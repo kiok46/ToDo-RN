@@ -1,9 +1,12 @@
 import {
     AsyncStorage
 } from 'react-native';
-
+import _ from 'lodash';
 import {
     GET_TODO_DATA,
+    SET_TODO_DATA,
+    ERASE_TODO_DATA,
+    DELETE_TODO_ITEM,
     RETURN_EMPTY_TODO
 } from './types';
 
@@ -13,24 +16,33 @@ export const getToDoListData = () => async dispatch => {
     if (todo_data !== null){
         todo_data = JSON.parse(todo_data)
         dispatch({ type: GET_TODO_DATA, payload: todo_data })
+    }
+}
+
+
+export const addToDoItem = (todo_data) => async dispatch => {
+    var updated_list = []
+    let todo_data_list = await AsyncStorage.getItem('todo_data')
+    if (todo_data_list){
+        todo_data_list = JSON.parse(todo_data_list)
+        todo_data_list.push(todo_data)
+        updated_list = todo_data_list
+
     } else {
-        dispatch({ type: RETURN_EMPTY_TODO, payload: [] })
+        updated_list.push(todo_data)
     }
+
+    await AsyncStorage.setItem('todo_data', JSON.stringify(updated_list))
+    dispatch({ type: SET_TODO_DATA, payload: updated_list })
 }
 
 
-export const setToDoListData = (todo_data) => async dispatch => {
-    await AsyncStorage.setItem('todo_data', JSON.stringify(todo_data))
+export const deleteToDoItem = (item) => async dispatch => {
+    
+    dispatch({ type: DELETE_TODO_ITEM, payload: [] })
 }
 
-/*
-todo_data = [
-    {
-        content: "Need to buy biscuits",
-        media_attached_uri: null,
-        completed: false,
-        ends_at: new Date()
-    }
-]
-*/
-
+export const eraseToDoData = () => async dispatch => {
+    await AsyncStorage.clear()
+    dispatch({ type: ERASE_TODO_DATA, payload: [] })
+}

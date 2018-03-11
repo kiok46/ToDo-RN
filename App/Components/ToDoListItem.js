@@ -65,7 +65,7 @@ class ToDoListItem extends Component {
 	render (){
         return (
           <Card>
-            <View style={[styles.cardContainerStyle, {backgroundColor: 'white'}]}>
+            <View style={[styles.cardContainerStyle, {backgroundColor: Colors.white}]}>
               <View style={styles.contentContainerStyle}>
                 {this.renderContentText()}
               </View>

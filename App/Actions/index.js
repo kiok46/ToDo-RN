@@ -6,6 +6,7 @@ export {
 
 export {
     getToDoListData,
-    setToDoListData
+    addToDoItem,
+    eraseToDoData,
 } from './todoListData';
 
