@@ -9,6 +9,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { connect } from 'react-redux';
+import { setToDoListData, getToDoListData } from '../Actions';
 
 import ToDoListItem from '../Components/ToDoListItem';
 import FloatingButton from '../Components/FloatingButton';
@@ -20,7 +22,13 @@ class HomeContainer extends Component {
   };
 
   componentWillMount() {
-    // const p = this.props.getToDoListData()
+    this.props.getToDoListData()
+  }
+
+  componentWillReceiveProps(newProps){
+    if (newProps !== this.props) {
+      this.setState({ todo_data: newProps.todo_data })
+    }
   }
 
   saveEditedToDo = () => {
@@ -36,9 +44,22 @@ class HomeContainer extends Component {
   }
 
   render() {
+
     return (
       <KeyboardAvoidingView style={styles.container} behavior={'padding'}>
         <ScrollView style={styles.container} >
+          {this.props.todo_data.map((itemContent, idx) => {
+            return (
+              <ToDoListItem
+                key={idx}
+                contentText={itemContent.content}
+                endAt={itemContent.ends_at}
+                onEditDone={this.saveEditedToDo}
+                onAttachMedia={this.onAttachMedia}
+                onComplete={this.onToDoTaskComplete}
+              />
+            )
+          })}
           <ToDoListItem
             contentText={"Need to buy biscuits."}
             onEditDone={this.saveEditedToDo}
@@ -69,4 +90,10 @@ const styles = StyleSheet.create({
 });
 
 
-export default HomeContainer;
+const mapStateToProps = (state) => {
+  return {
+    todo_data: state.ToDoListData.todo_data
+  }
+}
+
+export default connect(mapStateToProps, { setToDoListData, getToDoListData })(HomeContainer);
