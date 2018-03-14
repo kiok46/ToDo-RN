@@ -32,7 +32,6 @@ class SettingsContainer extends Component {
   render() {
     return (
       <View>
-        <Button text={"Notification Settings"} onPress={this.logout}/>
         <Button text={"logout"} onPress={this.logout}/>
       </View>
     );
