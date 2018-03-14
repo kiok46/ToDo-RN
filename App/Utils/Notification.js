@@ -20,7 +20,7 @@ createNotification = () => {
     }
 }
 
-setLocalNotification = () => {
+setLocalNotification = (notificationkey) => {
   AsyncStorage.getItem(NOTIFICATION_KEY)
       .then(JSON.parse)
       .then((data) => {
@@ -34,7 +34,6 @@ setLocalNotification = () => {
 
                           const schedulingOptions = {
                             time: t,
-                            repeat: 'minute'
                           };
                           Notifications.scheduleLocalNotificationAsync(
                               createNotification(),

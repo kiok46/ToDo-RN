@@ -10,37 +10,54 @@ import {
     RETURN_EMPTY_TODO
 } from './types';
 
+import { List } from 'immutable';
+
 
 export const getToDoListData = () => async dispatch => {
-    var todo_data = await AsyncStorage.getItem('todo_data')
-    if (todo_data !== null){
-        todo_data = JSON.parse(todo_data)
-        dispatch({ type: GET_TODO_DATA, payload: todo_data })
+    // AsyncStorage.clear()
+    var todoData = await AsyncStorage.getItem('todo_data')
+    if (todoData !== null){
+        todoData = JSON.parse(todoData)
+        dispatch({ type: GET_TODO_DATA, payload: todoData })
     }
 }
 
 
-export const addToDoItem = (todo_data) => async dispatch => {
-    var updated_list = []
-    let todo_data_list = await AsyncStorage.getItem('todo_data')
-    if (todo_data_list){
-        todo_data_list = JSON.parse(todo_data_list)
-        todo_data_list.push(todo_data)
-        updated_list = todo_data_list
+export const updateToDoItem = (idx, contentText) => async dispatch => {
+    var todoData = await AsyncStorage.getItem('todo_data')
+    todoData = JSON.parse(todoData)
+    var updatedList = [...todoData]
+    updatedList[idx].content = contentText
+    dispatch({ type: SET_TODO_DATA, payload: updatedList })
+    await AsyncStorage.setItem('todo_data', JSON.stringify(updatedList))
+}
 
+
+export const addToDoItem = (todoData) => async dispatch => {
+    var updatedList = []
+    let todoDataList = await AsyncStorage.getItem('todo_data')
+    if (todoDataList){
+        todoDataList = JSON.parse(todoDataList)
+        todoDataList.push(todoData)
+        updatedList = todoDataList
     } else {
-        updated_list.push(todo_data)
+        updatedList.push(todoData)
     }
 
-    await AsyncStorage.setItem('todo_data', JSON.stringify(updated_list))
-    dispatch({ type: SET_TODO_DATA, payload: updated_list })
+    await AsyncStorage.setItem('todo_data', JSON.stringify(updatedList))
+    dispatch({ type: SET_TODO_DATA, payload: updatedList })
 }
 
 
-export const deleteToDoItem = (item) => async dispatch => {
-    
-    dispatch({ type: DELETE_TODO_ITEM, payload: [] })
+export const deleteToDoItem = (index, todoList) => async dispatch => {
+    if (index > -1) {
+        let todoData = [...todoList]
+        todoData.splice(index, 1)
+        dispatch({ type: DELETE_TODO_ITEM, payload: todoData })
+        await AsyncStorage.setItem('todo_data', JSON.stringify(todoData))
+    }   
 }
+
 
 export const eraseToDoData = () => async dispatch => {
     await AsyncStorage.clear()

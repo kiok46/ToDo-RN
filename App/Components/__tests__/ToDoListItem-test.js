@@ -11,5 +11,7 @@ describe('testing ToDoListItem rendering', () => {
         expect(wrapper).toMatchSnapshot();
         wrapper.setProps({ contentText: "Need to buy biscuits" })
         expect(wrapper).toMatchSnapshot();
+        wrapper.setProps({ endAt: "Never" })
+        expect(wrapper).toMatchSnapshot();
     })
 })

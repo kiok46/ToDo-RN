@@ -27,9 +27,15 @@ class ToDoListItem extends Component {
             isOpen: !this.state.isOpen
         }, () => {
             if (!this.state.isOpen) {
-                this.props.onEditDone()
+                this.props.onEditDone(this.state.contentText)
             }
         })
+    }
+
+    componentWillReceiveProps(newProps){
+        if (this.props !== newProps){
+            this.setState({ contentText: newProps.contentText })
+        }
     }
 
     changeContentText = (contentText) => {

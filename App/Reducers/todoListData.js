@@ -8,7 +8,7 @@ import {
 
 
 export const INITIAL_STATE = {
-    todo_data: []
+    todoData: []
 }
 
 
@@ -17,27 +17,27 @@ export default ( state=INITIAL_STATE, action ) => {
         case GET_TODO_DATA:
             return { 
                 ...state,
-                todo_data: action.payload
+                todoData: action.payload
             }
         case RETURN_EMPTY_TODO:
             return { 
                 ...state,
-                todo_data: action.payload
+                todoData: action.payload
             }
         case SET_TODO_DATA:
             return {
                 ...state,
-                todo_data: action.payload
+                todoData: action.payload
             }
         case ERASE_TODO_DATA:
             return {
                 ...state,
-                todo_data: action.payload
+                todoData: action.payload
             } 
         case DELETE_TODO_ITEM:
             return {
                 ...state,
-                todo_data: action.payload
+                todoData: action.payload
             }
         default:
             return state

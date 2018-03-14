@@ -955,7 +955,7 @@ ShallowWrapper {
               }
             }
           >
-            
+            Need to buy biscuits
           </Text>
         </View>
         <View
@@ -1054,7 +1054,7 @@ ShallowWrapper {
                 }
               }
             >
-              
+              Need to buy biscuits
             </Text>
           </View>,
           <View
@@ -1154,7 +1154,7 @@ ShallowWrapper {
                 }
               }
             >
-              
+              Need to buy biscuits
             </Text>,
             "style": Object {
               "alignItems": "center",
@@ -1172,7 +1172,7 @@ ShallowWrapper {
             "props": Object {
               "accessible": true,
               "allowFontScaling": true,
-              "children": "",
+              "children": "Need to buy biscuits",
               "ellipsizeMode": "tail",
               "numberOfLines": 5,
               "style": Object {
@@ -1182,7 +1182,7 @@ ShallowWrapper {
               },
             },
             "ref": null,
-            "rendered": "",
+            "rendered": "Need to buy biscuits",
             "type": [Function],
           },
           "type": [Function],
@@ -1387,7 +1387,7 @@ ShallowWrapper {
                 }
               }
             >
-              
+              Need to buy biscuits
             </Text>
           </View>
           <View
@@ -1486,7 +1486,7 @@ ShallowWrapper {
                   }
                 }
               >
-                
+                Need to buy biscuits
               </Text>
             </View>,
             <View
@@ -1586,7 +1586,7 @@ ShallowWrapper {
                   }
                 }
               >
-                
+                Need to buy biscuits
               </Text>,
               "style": Object {
                 "alignItems": "center",
@@ -1604,7 +1604,7 @@ ShallowWrapper {
               "props": Object {
                 "accessible": true,
                 "allowFontScaling": true,
-                "children": "",
+                "children": "Need to buy biscuits",
                 "ellipsizeMode": "tail",
                 "numberOfLines": 5,
                 "style": Object {
@@ -1614,7 +1614,899 @@ ShallowWrapper {
                 },
               },
               "ref": null,
-              "rendered": "",
+              "rendered": "Need to buy biscuits",
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Ends at:  
+                Never
+              </Text>,
+              "style": Object {
+                "paddingHorizontal": 10,
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": Array [
+                  "Ends at:  ",
+                  "Never",
+                ],
+                "ellipsizeMode": "tail",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Ends at:  ",
+                "Never",
+              ],
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Icon
+                  allowFontScaling={false}
+                  color="#2f95dc"
+                  name="edit"
+                  onPress={[Function]}
+                  size={24}
+                  style={
+                    Object {
+                      "paddingTop": 15,
+                    }
+                  }
+                />,
+                <Icon
+                  allowFontScaling={false}
+                  color="#2f95dc"
+                  name="attachment"
+                  onPress={[Function]}
+                  size={24}
+                  style={
+                    Object {
+                      "paddingTop": 15,
+                    }
+                  }
+                />,
+                <Icon
+                  allowFontScaling={false}
+                  color="#2f95dc"
+                  name="check"
+                  onPress={[Function]}
+                  size={24}
+                  style={
+                    Object {
+                      "paddingTop": 15,
+                    }
+                  }
+                />,
+              ],
+              "style": Object {
+                "borderColor": "#2f95dc",
+                "borderTopWidth": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "allowFontScaling": false,
+                  "color": "#2f95dc",
+                  "name": "edit",
+                  "onPress": [Function],
+                  "size": 24,
+                  "style": Object {
+                    "paddingTop": 15,
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "allowFontScaling": false,
+                  "color": "#2f95dc",
+                  "name": "attachment",
+                  "onPress": [Function],
+                  "size": 24,
+                  "style": Object {
+                    "paddingTop": 15,
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "allowFontScaling": false,
+                  "color": "#2f95dc",
+                  "name": "check",
+                  "onPress": [Function],
+                  "size": 24,
+                  "style": Object {
+                    "paddingTop": 15,
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`testing ToDoListItem rendering renders as expected 3`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ToDoListItem
+    contentText="Need to buy biscuits"
+    endAt="Never"
+    onAttachMedia={[Function]}
+    onComplete={[Function]}
+    onEditDone={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(230, 230, 230, 1)",
+              "flex": 1,
+              "height": 250,
+              "justifyContent": "space-around",
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "rgba(255, 255, 255, 1)",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 150,
+              "justifyContent": "center",
+              "margin": 5,
+              "width": "100%",
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={5}
+            style={
+              Object {
+                "color": "rgba(0, 0, 0, 1)",
+                "fontSize": 16,
+                "fontWeight": "500",
+              }
+            }
+          >
+            Need to buy biscuits
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 10,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Ends at:  
+            Never
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "borderColor": "#2f95dc",
+              "borderTopWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+            }
+          }
+        >
+          <Icon
+            allowFontScaling={false}
+            color="#2f95dc"
+            name="edit"
+            onPress={[Function]}
+            size={24}
+            style={
+              Object {
+                "paddingTop": 15,
+              }
+            }
+          />
+          <Icon
+            allowFontScaling={false}
+            color="#2f95dc"
+            name="attachment"
+            onPress={[Function]}
+            size={24}
+            style={
+              Object {
+                "paddingTop": 15,
+              }
+            }
+          />
+          <Icon
+            allowFontScaling={false}
+            color="#2f95dc"
+            name="check"
+            onPress={[Function]}
+            size={24}
+            style={
+              Object {
+                "paddingTop": 15,
+              }
+            }
+          />
+        </View>
+      </View>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 150,
+                "justifyContent": "center",
+                "margin": 5,
+                "width": "100%",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={5}
+              style={
+                Object {
+                  "color": "rgba(0, 0, 0, 1)",
+                  "fontSize": 16,
+                  "fontWeight": "500",
+                }
+              }
+            >
+              Need to buy biscuits
+            </Text>
+          </View>,
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 10,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              Ends at:  
+              Never
+            </Text>
+          </View>,
+          <View
+            style={
+              Object {
+                "borderColor": "#2f95dc",
+                "borderTopWidth": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+              }
+            }
+          >
+            <Icon
+              allowFontScaling={false}
+              color="#2f95dc"
+              name="edit"
+              onPress={[Function]}
+              size={24}
+              style={
+                Object {
+                  "paddingTop": 15,
+                }
+              }
+            />
+            <Icon
+              allowFontScaling={false}
+              color="#2f95dc"
+              name="attachment"
+              onPress={[Function]}
+              size={24}
+              style={
+                Object {
+                  "paddingTop": 15,
+                }
+              }
+            />
+            <Icon
+              allowFontScaling={false}
+              color="#2f95dc"
+              name="check"
+              onPress={[Function]}
+              size={24}
+              style={
+                Object {
+                  "paddingTop": 15,
+                }
+              }
+            />
+          </View>,
+        ],
+        "style": Array [
+          Object {
+            "backgroundColor": "rgba(230, 230, 230, 1)",
+            "flex": 1,
+            "height": 250,
+            "justifyContent": "space-around",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgba(255, 255, 255, 1)",
+          },
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={5}
+              style={
+                Object {
+                  "color": "rgba(0, 0, 0, 1)",
+                  "fontSize": 16,
+                  "fontWeight": "500",
+                }
+              }
+            >
+              Need to buy biscuits
+            </Text>,
+            "style": Object {
+              "alignItems": "center",
+              "height": 150,
+              "justifyContent": "center",
+              "margin": 5,
+              "width": "100%",
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "Need to buy biscuits",
+              "ellipsizeMode": "tail",
+              "numberOfLines": 5,
+              "style": Object {
+                "color": "rgba(0, 0, 0, 1)",
+                "fontSize": 16,
+                "fontWeight": "500",
+              },
+            },
+            "ref": null,
+            "rendered": "Need to buy biscuits",
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              Ends at:  
+              Never
+            </Text>,
+            "style": Object {
+              "paddingHorizontal": 10,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": Array [
+                "Ends at:  ",
+                "Never",
+              ],
+              "ellipsizeMode": "tail",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Ends at:  ",
+              "Never",
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Icon
+                allowFontScaling={false}
+                color="#2f95dc"
+                name="edit"
+                onPress={[Function]}
+                size={24}
+                style={
+                  Object {
+                    "paddingTop": 15,
+                  }
+                }
+              />,
+              <Icon
+                allowFontScaling={false}
+                color="#2f95dc"
+                name="attachment"
+                onPress={[Function]}
+                size={24}
+                style={
+                  Object {
+                    "paddingTop": 15,
+                  }
+                }
+              />,
+              <Icon
+                allowFontScaling={false}
+                color="#2f95dc"
+                name="check"
+                onPress={[Function]}
+                size={24}
+                style={
+                  Object {
+                    "paddingTop": 15,
+                  }
+                }
+              />,
+            ],
+            "style": Object {
+              "borderColor": "#2f95dc",
+              "borderTopWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "allowFontScaling": false,
+                "color": "#2f95dc",
+                "name": "edit",
+                "onPress": [Function],
+                "size": 24,
+                "style": Object {
+                  "paddingTop": 15,
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "allowFontScaling": false,
+                "color": "#2f95dc",
+                "name": "attachment",
+                "onPress": [Function],
+                "size": 24,
+                "style": Object {
+                  "paddingTop": 15,
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "allowFontScaling": false,
+                "color": "#2f95dc",
+                "name": "check",
+                "onPress": [Function],
+                "size": 24,
+                "style": Object {
+                  "paddingTop": 15,
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(230, 230, 230, 1)",
+                "flex": 1,
+                "height": 250,
+                "justifyContent": "space-around",
+                "width": "100%",
+              },
+              Object {
+                "backgroundColor": "rgba(255, 255, 255, 1)",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 150,
+                "justifyContent": "center",
+                "margin": 5,
+                "width": "100%",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={5}
+              style={
+                Object {
+                  "color": "rgba(0, 0, 0, 1)",
+                  "fontSize": 16,
+                  "fontWeight": "500",
+                }
+              }
+            >
+              Need to buy biscuits
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 10,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+            >
+              Ends at:  
+              Never
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "borderColor": "#2f95dc",
+                "borderTopWidth": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+              }
+            }
+          >
+            <Icon
+              allowFontScaling={false}
+              color="#2f95dc"
+              name="edit"
+              onPress={[Function]}
+              size={24}
+              style={
+                Object {
+                  "paddingTop": 15,
+                }
+              }
+            />
+            <Icon
+              allowFontScaling={false}
+              color="#2f95dc"
+              name="attachment"
+              onPress={[Function]}
+              size={24}
+              style={
+                Object {
+                  "paddingTop": 15,
+                }
+              }
+            />
+            <Icon
+              allowFontScaling={false}
+              color="#2f95dc"
+              name="check"
+              onPress={[Function]}
+              size={24}
+              style={
+                Object {
+                  "paddingTop": 15,
+                }
+              }
+            />
+          </View>
+        </View>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 150,
+                  "justifyContent": "center",
+                  "margin": 5,
+                  "width": "100%",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                numberOfLines={5}
+                style={
+                  Object {
+                    "color": "rgba(0, 0, 0, 1)",
+                    "fontSize": 16,
+                    "fontWeight": "500",
+                  }
+                }
+              >
+                Need to buy biscuits
+              </Text>
+            </View>,
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 10,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Ends at:  
+                Never
+              </Text>
+            </View>,
+            <View
+              style={
+                Object {
+                  "borderColor": "#2f95dc",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-around",
+                }
+              }
+            >
+              <Icon
+                allowFontScaling={false}
+                color="#2f95dc"
+                name="edit"
+                onPress={[Function]}
+                size={24}
+                style={
+                  Object {
+                    "paddingTop": 15,
+                  }
+                }
+              />
+              <Icon
+                allowFontScaling={false}
+                color="#2f95dc"
+                name="attachment"
+                onPress={[Function]}
+                size={24}
+                style={
+                  Object {
+                    "paddingTop": 15,
+                  }
+                }
+              />
+              <Icon
+                allowFontScaling={false}
+                color="#2f95dc"
+                name="check"
+                onPress={[Function]}
+                size={24}
+                style={
+                  Object {
+                    "paddingTop": 15,
+                  }
+                }
+              />
+            </View>,
+          ],
+          "style": Array [
+            Object {
+              "backgroundColor": "rgba(230, 230, 230, 1)",
+              "flex": 1,
+              "height": 250,
+              "justifyContent": "space-around",
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "rgba(255, 255, 255, 1)",
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                numberOfLines={5}
+                style={
+                  Object {
+                    "color": "rgba(0, 0, 0, 1)",
+                    "fontSize": 16,
+                    "fontWeight": "500",
+                  }
+                }
+              >
+                Need to buy biscuits
+              </Text>,
+              "style": Object {
+                "alignItems": "center",
+                "height": 150,
+                "justifyContent": "center",
+                "margin": 5,
+                "width": "100%",
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": "Need to buy biscuits",
+                "ellipsizeMode": "tail",
+                "numberOfLines": 5,
+                "style": Object {
+                  "color": "rgba(0, 0, 0, 1)",
+                  "fontSize": 16,
+                  "fontWeight": "500",
+                },
+              },
+              "ref": null,
+              "rendered": "Need to buy biscuits",
               "type": [Function],
             },
             "type": [Function],

@@ -11,10 +11,13 @@ import {
   View,
 } from 'react-native';
 import { connect } from 'react-redux';
-import { getToDoListData } from '../Actions';
+
+import { updateToDoItem, deleteToDoItem, getToDoListData } from '../Actions';
 
 import ToDoListItem from '../Components/ToDoListItem';
 import FloatingButton from '../Components/FloatingButton';
+
+import { returnIndex } from '../Utils/Helper';
 
 
 class HomeContainer extends Component {
@@ -22,40 +25,28 @@ class HomeContainer extends Component {
     header: null,
   };
 
-  constructor(props){
-    super(props)
-    this.state={
-      todo_data: this.props.todo_data
-    }
-  }
-
   componentWillMount() {
     this.props.getToDoListData()
   }
 
-  componentWillReceiveProps(newProps){
-    if (newProps !== this.props) {
-      console.log(newProps, "newProps")
-      this.setState({ todo_data: newProps.todo_data })
-    }
-  }
-
-  saveEditedToDo = () => {
-
+  saveEditedToDo = (uniqueId, text) => {
+    const idx = returnIndex(uniqueId, this.props.todoData)
+    this.props.updateToDoItem(idx, text)
   }
 
   onAttachMedia = () => {
-    Expo.DocumentPicker.getDocumentAsync({type: "*/*"})
+    Expo.DocumentPicker.getDocumentAsync({ type: "*/*" })
   }
 
-  onToDoTaskComplete = () => {
-
+  onToDoTaskComplete = (uniqueId) => {
+    const idx = returnIndex(uniqueId, this.props.todoData)
+    this.props.deleteToDoItem(idx, this.props.todoData)
   }
 
   render() {
 
-    console.log(this.props.todo_data, "In the HomeContainer")
-    if (!this.props.todo_data){
+    const todoData = this.props.todoData
+    if (!todoData || todoData === []){
       return (
         <ActivityIndicator/>
       )
@@ -63,15 +54,15 @@ class HomeContainer extends Component {
       return (
         <KeyboardAvoidingView style={styles.container} behavior={'padding'}>
           <ScrollView style={styles.container} >
-            {this.props.todo_data.map((itemContent, idx) => {
+            {todoData.map((itemContent, idx) => {
               return (
                 <ToDoListItem
                   key={idx}
                   contentText={itemContent.content}
                   endAt={itemContent.ends_at}
-                  onEditDone={this.saveEditedToDo}
+                  onEditDone={(text) => this.saveEditedToDo(itemContent.id, text)}
                   onAttachMedia={this.onAttachMedia}
-                  onComplete={this.onToDoTaskComplete}
+                  onComplete={() => this.onToDoTaskComplete(itemContent.id)}
                 />
               )
             })}
@@ -94,8 +85,8 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = (state) => {
   return {
-    todo_data: state.ToDoListData.todo_data
+    todoData: state.ToDoListData.todoData
   }
 }
 
-export default connect(mapStateToProps, { getToDoListData })(HomeContainer);
+export default connect(mapStateToProps, { updateToDoItem, deleteToDoItem, getToDoListData })(HomeContainer);

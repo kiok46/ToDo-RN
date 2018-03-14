@@ -8,5 +8,7 @@ export {
     getToDoListData,
     addToDoItem,
     eraseToDoData,
+    updateToDoItem,
+    deleteToDoItem
 } from './todoListData';
 

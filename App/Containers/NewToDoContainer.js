@@ -12,6 +12,8 @@ import {
 import { connect } from 'react-redux';
 import { addToDoItem } from '../Actions';
 
+import uuid from 'uuid';
+
 import DateTimePicker from 'react-native-modal-datetime-picker';
 import Button from '../Components/Button';
 import Colors from '../Utils/Colors';
@@ -46,15 +48,17 @@ class NewToDoContainer extends Component {
   }
 
   createToDoTask = () =>{
-    let todo_data = {
+    let todoData = {
+      id: uuid(this.state.contentText),
       content: this.state.contentText,
       media_attached_uri: null,
-      ends_at: this.state.date
+      ends_at: this.state.date,
+      notification_key: null,
     }
 
     this.props.navigation.navigate('Home')
     this.setState({ contentText: "", date: "" })
-    this.props.addToDoItem(todo_data)
+    this.props.addToDoItem(todoData)
   }
 
   render() {
