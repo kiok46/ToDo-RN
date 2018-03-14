@@ -16,14 +16,6 @@ class RootContainer extends Component {
     this.props.isLoggedIn()
   }
 
-  componentDidMount() {
-    setLocalNotification();
-  }
-
-  componentWillUnmount() {
-    clearLocalNotification();
-  }
-
   render() {
       if (this.props.loggedIn !== null) {
         return (

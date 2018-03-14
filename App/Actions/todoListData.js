@@ -1,7 +1,7 @@
 import {
     AsyncStorage
 } from 'react-native';
-import _ from 'lodash';
+
 import {
     GET_TODO_DATA,
     SET_TODO_DATA,

@@ -20,8 +20,11 @@ createNotification = () => {
     }
 }
 
-setLocalNotification = (notificationkey) => {
-  AsyncStorage.getItem(NOTIFICATION_KEY)
+setLocalNotification = (taskEndTime, uniqueId) => {
+  var triggerTime = new Date();
+  triggerTime.setMinutes(taskEndTime.getMinutes() - 10);
+
+  AsyncStorage.getItem(uniqueId)
       .then(JSON.parse)
       .then((data) => {
           if (data === null) {
@@ -29,25 +32,23 @@ setLocalNotification = (notificationkey) => {
                   .then(({ status }) => {
                       if (status === 'granted') {
                           Notifications.cancelAllScheduledNotificationsAsync()
-                          let t = new Date();
-                          t.setSeconds(t.getSeconds() + 10);
 
                           const schedulingOptions = {
-                            time: t,
+                            time: triggerTime,
                           };
                           Notifications.scheduleLocalNotificationAsync(
                               createNotification(),
                               schedulingOptions
                           )
-                          AsyncStorage.setItem(NOTIFICATION_KEY, JSON.stringify(true))
+                          AsyncStorage.setItem(uniqueId, JSON.stringify(true))
                       }
                   })
           }
       })
 }
 
-clearLocalNotification = () => {
-  return AsyncStorage.removeItem(NOTIFICATION_KEY)
+clearLocalNotification = (uniqueId) => {
+  return AsyncStorage.removeItem(uniqueId)
       .then(Notifications.cancelAllScheduledNotificationsAsync)
 }
 

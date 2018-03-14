@@ -19,6 +19,8 @@ import FloatingButton from '../Components/FloatingButton';
 
 import { returnIndex } from '../Utils/Helper';
 
+import { clearLocalNotification } from '../Utils/Notification';
+
 
 class HomeContainer extends Component {
   static navigationOptions = {
@@ -39,6 +41,7 @@ class HomeContainer extends Component {
   }
 
   onToDoTaskComplete = (uniqueId) => {
+    clearLocalNotification(uniqueId)
     const idx = returnIndex(uniqueId, this.props.todoData)
     this.props.deleteToDoItem(idx, this.props.todoData)
   }

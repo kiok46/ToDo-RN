@@ -8,3 +8,5 @@ export const RETURN_EMPTY_TODO = 'return_empty_todo';
 export const SET_TODO_DATA = 'set_todo_data';
 export const ERASE_TODO_DATA = 'erase_todo_data';
 export const DELETE_TODO_ITEM = 'delete_todo_item';
+
+export const SCHEDULE_NOTIFICATION = 'schedule_notification'

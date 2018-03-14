@@ -9,14 +9,17 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import DateTimePicker from 'react-native-modal-datetime-picker';
 import { connect } from 'react-redux';
-import { addToDoItem } from '../Actions';
 
 import uuid from 'uuid';
 
-import DateTimePicker from 'react-native-modal-datetime-picker';
+import { addToDoItem } from '../Actions';
+
 import Button from '../Components/Button';
 import Colors from '../Utils/Colors';
+
+import { setLocalNotification } from '../Utils/Notification';
 
 
 class NewToDoContainer extends Component {
@@ -26,7 +29,7 @@ class NewToDoContainer extends Component {
   state = {
     isDateTimePickerVisible: false,
     contentText: "",
-    date: "never",
+    date: "Never",
   };
 
 
@@ -39,7 +42,7 @@ class NewToDoContainer extends Component {
   }
 
   _handleDatePicked = (date) => {
-    this.setState({ date: date.toString() })
+    this.setState({ date })
     this._hideDateTimePicker();
   };
 
@@ -48,16 +51,19 @@ class NewToDoContainer extends Component {
   }
 
   createToDoTask = () =>{
+    const uniqueId = uuid(this.state.contentText)
+    const taskEndTime = this.state.date
+
     let todoData = {
-      id: uuid(this.state.contentText),
+      id: uniqueId,
       content: this.state.contentText,
       media_attached_uri: null,
-      ends_at: this.state.date,
-      notification_key: null,
+      ends_at: taskEndTime.toString(),
     }
 
+    this.props.setLocalNotification(taskEndTime, uniqueId)
     this.props.navigation.navigate('Home')
-    this.setState({ contentText: "", date: "" })
+    this.setState({ contentText: "", date: "Never" })
     this.props.addToDoItem(todoData)
   }
 
@@ -81,7 +87,7 @@ class NewToDoContainer extends Component {
         </View>
         <View style={{ paddingHorizontal: 10 }}>
             <Text style={{ fontSize: 16, fontWeight: '300' }}>
-              Time selected: {this.state.date}
+              Time selected: {this.state.date.toString()}
             </Text>
         </View>
         <Button
